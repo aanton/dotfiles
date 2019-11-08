@@ -22,7 +22,7 @@
   "php.validate.executablePath": "/usr/bin/php",
   "php.validate.run": "onType",
   "search.useIgnoreFiles": false,
-  "terminal.integrated.fontFamily": "Ubuntu Mono",
+  "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
   "window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",
   "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
