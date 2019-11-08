@@ -1,0 +1,26 @@
+{
+	"Insert inline code": {
+		"prefix": "`",
+		"body": "`${1:${TM_SELECTED_TEXT}}`$0",
+		"description": "Insert inline code"
+	},
+	"Insert code block": {
+		"prefix": "`c",
+		"body": [
+			"```${1:language}",
+			"$0",
+			"```"
+		],
+		"description": "Insert code block"
+	},
+	"Insert shell block": {
+		"prefix": "`s",
+		"body": [
+			"```bash",
+			"$0",
+			"```"
+		],
+		"description": "Insert shell block"
+	},
+}
+

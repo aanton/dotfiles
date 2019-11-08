@@ -1,0 +1,22 @@
+{
+	"Public Method": {
+		"prefix": "met",
+		"body": [
+			"public function $1()",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Protected Method": {
+		"prefix": "pmet",
+		"body": [
+			"protected function $1()",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": ""
+	}
+}
