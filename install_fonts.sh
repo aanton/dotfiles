@@ -47,7 +47,7 @@ function install_fonts_firacode {
       local SOURCE="${REPOSITORY}/blob/master/distr/ttf/${NAME}?raw=true"
       local DESTINATION="${FONTS_DIR}/${NAME}"
 
-      wget -O "${DESTINATION}" "${SOURCE}"
+      curl -L "${SOURCE}" -o "${DESTINATION}"
       RELOAD_FONTS=true
     fi
   done
@@ -64,7 +64,9 @@ function install_fonts_nerd {
     local SOURCE="${REPOSITORY}/blob/master/patched-fonts/UbuntuMono/Regular/complete/${NAME}?raw=true"
     local DESTINATION="${FONTS_DIR}/${NAME}"
 
-    wget -O "${DESTINATION}" "${SOURCE}"
+    SOURCE=$(echo "${SOURCE}" | sed 's/ /%20/g')
+    echo curl -L "${SOURCE}" -o "${DESTINATION}"
+    curl -L "${SOURCE}" -o "${DESTINATION}"
     RELOAD_FONTS=true
   fi
 }
