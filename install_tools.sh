@@ -2,14 +2,6 @@
 
 . `dirname $0`/core.sh
 
-function apt_update {
-  sudo apt update
-}
-
-function apt_upgrade {
-  sudo apt upgrade -y
-}
-
 function check_installed {
   local -r APP=$1
   local -r CHECK=${2:-$1}
@@ -54,7 +46,7 @@ function install_zsh {
   fi
 }
 
-apt_update
+sudo apt update
 
 install_apt curl
 install_apt git
@@ -67,5 +59,3 @@ install_manual fd
 install_manual fzf
 install_manual ripgrep rg
 install_zsh
-
-apt_upgrade
