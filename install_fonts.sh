@@ -16,7 +16,7 @@ function create_fonts_dir {
 }
 
 function reload_fonts {
-  if [ "RELOAD_FONTS" = true ]; then
+  if [ "$RELOAD_FONTS" = true ]; then
     echo "Reloading fonts"
     fc-cache -f
   fi
