@@ -79,3 +79,23 @@ alias gf="git fetch -p"
 alias gpull="git fetch -p && git pull --ff-only"
 alias gpush="git push origin HEAD"
 alias glast="git show -1"
+
+# fzf
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+
+  # fzf configuration
+  export FZF_DEFAULT_OPTS="--multi --reverse --border --inline-info --preview '([ -e {} ] && (head -10 {} || tree -C {} | head -10 ) || (echo {})) 2> /dev/null' --preview-window=right:40%:wrap"
+  export FZF_CTRL_R_OPTS="--no-preview"
+  export FZF_CTRL_T_OPTS="--bind 'ctrl-x:execute(vim {} < /dev/tty > /dev/tty)'"
+  export FZF_DEFAULT_COMMAND="(fd --hidden --exclude .git --follow || git ls-tree -r --name-only HEAD || (find . -path \"*/\.*\" -prune -o -type f -print -o -type l -print | sed s/^..//)) 2> /dev/null"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+  # fzf bindigs
+  bindkey '^P' fzf-file-widget
+
+  # fzf + git aliases
+  alias gshow="git show \$(git log --pretty=oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}')"
+  alias grebase="git rebase -i \$(git log --pretty=oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}')^"
+  alias gbranch="git checkout \$(git branch -vv | fzf +m | awk '{print \$1}')"
+fi

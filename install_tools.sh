@@ -64,6 +64,7 @@ install_apt jq
 install_apt tree
 install_apt vim
 install_manual fd
+install_manual fzf
 install_manual ripgrep rg
 install_zsh
 
