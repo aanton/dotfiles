@@ -5,7 +5,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-DEFAULT_USER="aanton"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,3 +98,5 @@ if [ -f ~/.fzf.zsh ]; then
   alias grebase="git rebase -i \$(git log --pretty=oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}')^"
   alias gbranch="git checkout \$(git branch -vv | fzf +m | awk '{print \$1}')"
 fi
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
