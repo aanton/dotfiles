@@ -1,0 +1,38 @@
+[core]
+  editor = vim
+  pager = less -ErX
+
+[push]
+  default = nothing
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = green reverse
+  local = green
+  remote = yellow
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[diff]
+  tool = meld
+
+[difftool "meld"]
+  cmd = meld "$LOCAL $REMOTE"
+
+[user]
+  useConfigOnly = true
+
+[include]
+  path = ~/.gitconfig.local
