@@ -18,6 +18,8 @@ function install_zsh {
 
 sudo apt update
 
+install_zsh
+
 install_apt curl
 install_apt git
 install_apt htop
@@ -25,7 +27,7 @@ install_apt httpie http
 install_apt jq
 install_apt tree
 install_apt vim
+
 install_manual fd
 install_manual fzf
 install_manual ripgrep rg
-install_zsh
