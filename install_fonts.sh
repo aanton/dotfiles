@@ -47,12 +47,29 @@ function install_fonts_firacode {
       local SOURCE="${REPOSITORY}/blob/master/distr/ttf/${NAME}?raw=true"
       local DESTINATION="${FONTS_DIR}/${NAME}"
 
-      wget -O ${DESTINATION} ${SOURCE}
+      wget -O "${DESTINATION}" "${SOURCE}"
       RELOAD_FONTS=true
     fi
   done
 }
 
+function install_fonts_nerd {
+  local -r REPOSITORY="https://github.com/ryanoasis/nerd-fonts"
+  local -r NAME="Ubuntu Mono Nerd Font Complete Mono.ttf"
+
+  check_font_installed "$NAME"
+  if [ $? -ne 0 ]; then
+    echo "Installing font: ${NAME} ..."
+
+    local SOURCE="${REPOSITORY}/blob/master/patched-fonts/UbuntuMono/Regular/complete/${NAME}?raw=true"
+    local DESTINATION="${FONTS_DIR}/${NAME}"
+
+    wget -O "${DESTINATION}" "${SOURCE}"
+    RELOAD_FONTS=true
+  fi
+}
+
 create_fonts_dir
 install_fonts_firacode
+install_fonts_nerd
 reload_fonts
