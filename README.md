@@ -1,6 +1,6 @@
 # aanton/dotfiles
 
-My dotfiles & tools that i usually use in 🐧 Ubuntu 18.04.
+Scripts to install my dotfiles & the tools i use in 🐧 Ubuntu 18.04.
 
 Inspired by:
 * https://github.com/victoriadrake/dotfiles
@@ -37,10 +37,11 @@ Before running these scripts, you should review them & modify them according to 
 # Install fonts
 ./install_fonts.sh
 
-# Continue only if installing in desktop environments ...
-
-# Install desktop tools
+# Install desktop tools (only in GUI environments)
 ./install_desktop_tools.sh
+
+# Install optional tools (confirmation is required for each tool)
+./install_optional_tools.sh
 ```
 
 ## ✏️ ToDo
