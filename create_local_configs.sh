@@ -6,7 +6,7 @@ function check_file_exists {
     return 1
   fi
 
-  echo "File already exists: $1"
+  echo "File already created: $1"
   return 0
 }
 
