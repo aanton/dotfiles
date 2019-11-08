@@ -22,19 +22,33 @@ function reload_fonts {
   fi
 }
 
+function check_font_installed {
+  local -r NAME=$1
+
+  if [ ! -f "${FONTS_DIR}/${NAME}" ]; then
+    echo "Font NOT found: ${NAME}"
+    return 1
+  fi
+
+  echo "Font already installed: ${NAME}"
+  return 0
+}
+
 function install_fonts_firacode {
   local -r REPOSITORY="https://github.com/tonsky/FiraCode"
 
   for TYPE in Bold Light Medium Regular Retina; do
-    local SOURCE="${REPOSITORY}/blob/master/distr/ttf/FiraCode-${TYPE}.ttf?raw=true"
-    local DESTINATION="${FONTS_DIR}/FiraCode-${TYPE}.ttf"
+    local NAME="FiraCode-${TYPE}.ttf"
 
-    if [ ! -f "${DESTINATION}" ]; then
-      echo "Installing font: ${DESTINATION}"
+    check_font_installed "$NAME"
+    if [ $? -ne 0 ]; then
+      echo "Installing font: ${NAME} ..."
+
+      local SOURCE="${REPOSITORY}/blob/master/distr/ttf/${NAME}?raw=true"
+      local DESTINATION="${FONTS_DIR}/${NAME}"
+
       wget -O ${DESTINATION} ${SOURCE}
       RELOAD_FONTS=true
-    else
-      echo "Font already installed: ${DESTINATION}"
     fi
   done
 }
