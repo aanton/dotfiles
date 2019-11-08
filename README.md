@@ -46,7 +46,6 @@ Before running these scripts, you should review them & modify them according to 
 
 ## ✏️ ToDo
 
-* Install vscode plugins
 * Install Z
 * Install php & extensions
 * Install composer
