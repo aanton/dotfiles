@@ -36,8 +36,8 @@ function install_manual {
 }
 
 function create_symlink {
-  local -r DESTINATION="${HOME}/${1}"
   local -r SOURCE="${PROJECTDIR}/symlinks/${1}"
+  local -r DESTINATION="${HOME}/${2:-$1}"
 
   if [ -h ${DESTINATION} ]; then
     echo "Removing existing symlink: ${DESTINATION}"
