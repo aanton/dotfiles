@@ -34,6 +34,9 @@ Before running these scripts, you should review them & modify them according to 
 # Install tools
 ./install_tools.sh
 
+# Install fonts
+./install_fonts.sh
+
 # Continue only if installing in desktop environments ...
 
 # Install desktop tools
