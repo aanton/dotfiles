@@ -55,3 +55,8 @@ function create_symlink {
   echo "Creating new symlink: ${DESTINATION}"
   ln -s ${SOURCE} ${DESTINATION}
 }
+
+function ask_for_installation {
+  read -p "Do you want to install $1 ? (y/n) "
+  [[ "$REPLY" =~ ^[Yy]$ ]] && return 0 || return 1
+}
