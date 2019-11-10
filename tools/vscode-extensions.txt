@@ -1,0 +1,13 @@
+bierner.emojisense
+bmewburn.vscode-intelephense-client
+dakara.transformer
+eamodio.gitlens
+HookyQR.beautify
+ms-azuretools.vscode-docker
+oderwat.indent-rainbow
+richie5um2.vscode-sort-json
+ryu1kn.partial-diff
+sleistner.vscode-fileutils
+softwareape.numbermonger
+Tyriar.lorem-ipsum
+zhuangtongfa.Material-theme
