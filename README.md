@@ -46,14 +46,10 @@ Before running these scripts, you should review them & modify them according to 
 
 ## ✏️ ToDo
 
-* Install Z
-* Install php & extensions
-* Install composer
-* Install MySQL Workbench
-* Install node
-* Install node packaged: surge
-* Add `.profile`
-* Add `.vimrc`
-* Add `.curlrc`
-* Configure desktop: gnome settings
+* Install tools: Z, ...
+* Install developments tools: php, php extensions, composer, node, node packages, ...
+* Install desktop tools: MySQL Workbench, FileZilla, ...
+* Install vscode extensions
+* Add symlinks: `.vimrc`, `.curlrc`, ...
+* Configure desktop: gnome & gnome-terminal
 * Log messages with colors & emojis
