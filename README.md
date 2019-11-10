@@ -1,6 +1,6 @@
 # aanton/dotfiles
 
-Scripts to install my dotfiles & the tools i use in 🐧 Ubuntu 18.04.
+Scripts to install the dotfiles & tools that i use in 🐧 Linux machines.
 
 Inspired by:
 * https://github.com/victoriadrake/dotfiles
@@ -24,8 +24,9 @@ echo $SHELL
 
 Before running these scripts, you should review them & modify them according to your needs.
 
-The scripts behaviour can be changed with this environment variable:
-* `DISABLE_APT_UPDATE=true`: Avoid updating APT before installing tools
+The scripts behaviours can be changed with these environment variables:
+* `DISABLE_APT_UPDATE=true`: Avoid updating APT before installing the tools
+* `FORCE_INSTALLATION=true`: Force installing the optional tools
 
 ```bash
 # Create symlinks
@@ -33,6 +34,10 @@ The scripts behaviour can be changed with this environment variable:
 
 # Create local configuration files
 ./create_local_configs.sh
+
+# Configure scripts behaviours
+# export DISABLE_APT_UPDATE=true
+export FORCE_INSTALLATION=true
 
 # Install tools
 ./install_tools.sh
@@ -44,17 +49,16 @@ The scripts behaviour can be changed with this environment variable:
 ./install_desktop_tools.sh
 
 # Install optional tools
-# Confirmation is required for each tool but can be forced using:
-# export FORCE_INSTALLATION=true
+# Confirmation is required for each tool depending on the FORCE_INSTALLATION environment variable
 ./install_optional_tools.sh
 ```
 
 ## ✏️ ToDo
 
 * Install tools: Z, ...
-* Install developments tools: node, node packages, ...
-* Install desktop tools: MySQL Workbench, ...
-* Install vscode extensions
-* Add symlinks: `.vimrc`, `.curlrc`, ...
+* Install more developments tools
+* Install more desktop tools
+* Install more vscode extensions
+* Add more symlinks: `.vimrc`, `.curlrc`, ...
 * Configure desktop: gnome & gnome-terminal
 * Log messages with colors & emojis
