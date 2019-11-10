@@ -57,6 +57,10 @@ function create_symlink {
 }
 
 function ask_for_installation {
+  if [[ -v FORCE_INSTALLATION && "$FORCE_INSTALLATION" = true ]]; then
+    return 0
+  fi
+
   read -p "Do you want to install $1 ? (y/n) "
   [[ "$REPLY" =~ ^[Yy]$ ]] && return 0 || return 1
 }

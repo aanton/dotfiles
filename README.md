@@ -40,7 +40,9 @@ Before running these scripts, you should review them & modify them according to 
 # Install desktop tools (only in GUI environments)
 ./install_desktop_tools.sh
 
-# Install optional tools (confirmation is required for each tool)
+# Install optional tools
+# Confirmation is required for each tool but can be forced using:
+# export FORCE_INSTALLATION=true
 ./install_optional_tools.sh
 ```
 
