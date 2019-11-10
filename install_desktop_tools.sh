@@ -2,7 +2,7 @@
 
 . `dirname $0`/core.sh
 
-sudo apt update
+update_apt
 
 install_apt meld
 install_manual google-chrome

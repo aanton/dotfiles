@@ -2,7 +2,7 @@
 
 . `dirname $0`/core.sh
 
-sudo apt update
+update_apt
 
 echo "Installing optional development tools ..."
 ask_for_installation docker && install_manual docker

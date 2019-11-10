@@ -12,7 +12,7 @@ function install_ohmyzsh {
   git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
 }
 
-sudo apt update
+update_apt
 
 install_apt curl
 install_apt git

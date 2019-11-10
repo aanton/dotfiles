@@ -3,6 +3,10 @@
 PROJECTDIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 DATETIME=$(date +%Y%m%d%H%M%S)
 
+function update_apt {
+  sudo apt update
+}
+
 function check_app_installed {
   local -r APP=$1
   local -r CHECK=${2:-$1}
