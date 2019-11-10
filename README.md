@@ -52,7 +52,6 @@ Before running these scripts, you should review them & modify them according to 
 * Install MySQL Workbench
 * Install node
 * Install node packaged: surge
-* Install Google Chrome
 * Add `.profile`
 * Add `.vimrc`
 * Add `.curlrc`
