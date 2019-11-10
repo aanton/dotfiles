@@ -4,6 +4,10 @@ PROJECTDIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 DATETIME=$(date +%Y%m%d%H%M%S)
 
 function update_apt {
+  if [[ -v DISABLE_APT_UPDATE && "$DISABLE_APT_UPDATE" = true ]]; then
+    return 0
+  fi
+
   sudo apt update
 }
 

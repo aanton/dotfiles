@@ -24,6 +24,9 @@ echo $SHELL
 
 Before running these scripts, you should review them & modify them according to your needs.
 
+The scripts behaviour can be changed with this environment variable:
+* `DISABLE_APT_UPDATE=true`: Avoid updating APT before installing tools
+
 ```bash
 # Create symlinks
 ./create_symlinks.sh
