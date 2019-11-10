@@ -61,4 +61,3 @@ export FORCE_INSTALLATION=true
 * Install more vscode extensions
 * Add more symlinks: `.vimrc`, `.curlrc`, ...
 * Configure desktop: gnome & gnome-terminal
-* Log messages with colors & emojis

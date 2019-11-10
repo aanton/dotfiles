@@ -7,17 +7,17 @@ RELOAD_FONTS=false
 
 function create_fonts_dir {
   if [ -d "${FONTS_DIR}" ]; then
-    echo "Fonts directory already created: ${FONTS_DIR}"
+    print_info "Fonts directory already created: ${FONTS_DIR}"
     return
   fi
 
-  echo "Creating fonts directory: ${FONTS_DIR}"
+  print_info "Creating fonts directory: ${FONTS_DIR}"
   mkdir -p "${FONTS_DIR}"
 }
 
 function reload_fonts {
   if [ "$RELOAD_FONTS" = true ]; then
-    echo "Reloading fonts"
+    print_info "Reloading fonts"
     fc-cache -f
   fi
 }
@@ -26,11 +26,11 @@ function check_font_installed {
   local -r NAME=$1
 
   if [ ! -f "${FONTS_DIR}/${NAME}" ]; then
-    echo "Font NOT found: ${NAME}"
+    print_info "Font NOT found: ${NAME}"
     return 1
   fi
 
-  echo "Font already installed: ${NAME}"
+  print_info "Font already installed: ${NAME}"
   return 0
 }
 
@@ -42,7 +42,7 @@ function install_fonts_firacode {
 
     check_font_installed "$NAME"
     if [ $? -ne 0 ]; then
-      echo "Installing font: ${NAME} ..."
+      print_info "Installing font: ${NAME} ..."
 
       local SOURCE="${REPOSITORY}/blob/master/distr/ttf/${NAME}?raw=true"
       local DESTINATION="${FONTS_DIR}/${NAME}"
@@ -59,7 +59,7 @@ function install_fonts_nerd {
 
   check_font_installed "$NAME"
   if [ $? -ne 0 ]; then
-    echo "Installing font: ${NAME} ..."
+    print_info "Installing font: ${NAME} ..."
 
     local SOURCE="${REPOSITORY}/blob/master/patched-fonts/UbuntuMono/Regular/complete/${NAME}?raw=true"
     local DESTINATION="${FONTS_DIR}/${NAME}"

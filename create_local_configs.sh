@@ -1,12 +1,14 @@
 #!/bin/bash
 
+. `dirname $0`/core.sh
+
 function check_file_exists {
   if [ ! -f "$1" ]; then
-    echo "Creating local file: $1 ..."
+    print_info "Creating local file: $1 ..."
     return 1
   fi
 
-  echo "File already created: $1"
+  print_info "File already created: $1"
   return 0
 }
 
@@ -18,10 +20,12 @@ function create_gitconfig {
     return 0
   fi
 
-  read -p "Enter your Git user.name [${USER}]: " NAME
+  print_question "Enter your Git user.name [${USER}]:"
+  read NAME
   NAME=${NAME:-$USER}
 
-  read -p "Enter your Git user.email [${NAME}@gmail.com]: " EMAIL
+  print_question "Enter your Git user.email [${NAME}@gmail.com]:"
+  read EMAIL
   EMAIL=${EMAIL:-${NAME}@gmail.com}
 
   cat > $DESTINATION <<- TXT

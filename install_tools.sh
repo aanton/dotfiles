@@ -4,11 +4,11 @@
 
 function install_ohmyzsh {
   if [[ -d $HOME/.oh-my-zsh ]]; then
-    echo "App already installed: oh-my-zsh"
+    print_info "App already installed: oh-my-zsh"
     return
   fi
 
-  echo "Installing: oh-my-zsh..."
+  print_info "Installing: oh-my-zsh ..."
   git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
 }
 
