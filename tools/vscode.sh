@@ -21,6 +21,7 @@ install_vscode
 create_vscode_symlinks
 
 install_vscode_extension bierner.emojisense
+install_vscode_extension bmewburn.vscode-intelephense-client
 install_vscode_extension dakara.transformer
 install_vscode_extension eamodio.gitlens
 install_vscode_extension HookyQR.beautify
