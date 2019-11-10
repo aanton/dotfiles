@@ -65,7 +65,6 @@ function install_fonts_nerd {
     local DESTINATION="${FONTS_DIR}/${NAME}"
 
     SOURCE=$(echo "${SOURCE}" | sed 's/ /%20/g')
-    echo curl -L "${SOURCE}" -o "${DESTINATION}"
     curl -L "${SOURCE}" -o "${DESTINATION}"
     RELOAD_FONTS=true
   fi
