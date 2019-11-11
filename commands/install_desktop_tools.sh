@@ -4,6 +4,7 @@
 
 function install_desktop_tools {
   install_apt meld
+  install_manual clipit
   install_manual google-chrome
   install_manual vscode code
 
