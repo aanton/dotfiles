@@ -25,13 +25,13 @@ echo $SHELL
 Before running these scripts, you should review them & modify them according to your needs.
 
 The scripts behaviours can be changed with these environment variables:
-* `DISABLE_APT_UPDATE`: Avoid updating APT before installing the tools
 * `FORCE_INSTALLATION`: Force installing the optional tools
+* `SKIP_APT_UPDATE`: Avoid updating APT before installing the tools
 * `SKIP_DESKTOP_TOOLS`: Avoid installing desktop tools
 
 ```bash
-export DISABLE_APT_UPDATE=true
 export FORCE_INSTALLATION=true
+export SKIP_APT_UPDATE=true
 export SKIP_DESKTOP_TOOLS=true
 ```
 
