@@ -24,7 +24,7 @@ EOT
   exit 0
 }
 
-#### COMMAND ALL ###############################################################
+#### COMMAND: RUN ALL ##########################################################
 
 function run_all_commands {
   update_apt
@@ -42,19 +42,10 @@ function run_all_commands {
   install_dev_tools
 }
 
-#### MAIN ######################################################################
+#### COMMAND: RUN ONE ##########################################################
 
-function main {
-  # Show help if no command is provided
-  [ $# -eq 0 ] && usage
-
-  COMMAND="$1"
-
-  # Run all commands
-  if [ $COMMAND = "all" ]; then
-    run_all_commands
-    return 0
-  fi
+function run_command {
+  local -r $COMMAND=$1
 
   # Check if the command exists
   COMMAND_SCRIPT=`dirname $0`/commands/${COMMAND}.sh
@@ -68,9 +59,27 @@ function main {
     update_apt
   fi
 
-  # Load command script & execute it
+  # Load the command file & execute it
   . $COMMAND_SCRIPT
   $COMMAND
+}
+
+#### MAIN ######################################################################
+
+function main {
+  # Show help if no command is provided
+  [ $# -eq 0 ] && usage
+
+  COMMAND="$1"
+  case $COMMAND in
+    all)
+      run_all_commands
+      ;;
+
+    *)
+      run_command "$COMMAND"
+      ;;
+  esac
 }
 
 main "$@"
