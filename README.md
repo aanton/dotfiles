@@ -27,10 +27,12 @@ Before running these scripts, you should review them & modify them according to 
 The scripts behaviours can be changed with these environment variables:
 * `DISABLE_APT_UPDATE`: Avoid updating APT before installing the tools
 * `FORCE_INSTALLATION`: Force installing the optional tools
+* `SKIP_DESKTOP_TOOLS`: Avoid installing desktop tools
 
 ```bash
 export DISABLE_APT_UPDATE=true
 export FORCE_INSTALLATION=true
+export SKIP_DESKTOP_TOOLS=true
 ```
 
 There are two usage alternatives:
@@ -47,6 +49,11 @@ FORCE_INSTALLATION=false ./install.sh all
 # Run the "all-in-one" command forcing the installation of the optional tools
 FORCE_INSTALLATION=true ./install.sh all
 
+# Run the "all-in-one" command forcing the installation of the optional tools but skipping the desktop tools
+FORCE_INSTALLATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
+```
+
+```bash
 # Command: Create symlinks
 ./install.sh create_symlinks
 

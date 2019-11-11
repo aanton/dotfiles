@@ -3,6 +3,10 @@
 #### COMMAND ###################################################################
 
 function install_desktop_tools {
+  if [[ -v SKIP_DESKTOP_TOOLS && "$SKIP_DESKTOP_TOOLS" = true ]]; then
+    return 0
+  fi
+
   install_apt meld
   install_manual clipit
   install_manual google-chrome
