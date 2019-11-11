@@ -86,9 +86,14 @@ if [ -f ~/.fzf.zsh ]; then
   # fzf configuration
   export FZF_DEFAULT_OPTS="--multi --reverse --border --inline-info --preview '([ -e {} ] && (head -10 {} || tree -C {} | head -10 ) || (echo {})) 2> /dev/null' --preview-window=right:40%:wrap"
   export FZF_CTRL_R_OPTS="--no-preview"
-  export FZF_CTRL_T_OPTS="--bind 'ctrl-x:execute(vim {} < /dev/tty > /dev/tty)'"
   export FZF_DEFAULT_COMMAND="(fd --hidden --exclude .git --follow || git ls-tree -r --name-only HEAD || (find . -path \"*/\.*\" -prune -o -type f -print -o -type l -print | sed s/^..//)) 2> /dev/null"
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+  if [ -x "$(command -v code)" ]; then
+    export FZF_CTRL_T_OPTS="--bind 'ctrl-x:execute(code -r {})'"
+  else
+    export FZF_CTRL_T_OPTS="--bind 'ctrl-x:execute(vim {} < /dev/tty > /dev/tty)'"
+  fi
 
   # fzf bindigs
   bindkey '^P' fzf-file-widget
