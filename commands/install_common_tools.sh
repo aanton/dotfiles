@@ -12,10 +12,21 @@ function install_ohmyzsh {
   git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
 }
 
+function install_z {
+  if [[ -f $HOME/z.sh ]]; then
+    print_info "App already installed: Z"
+    return
+  fi
+
+  print_info "Installing: Z ..."
+  curl -fsSL https://raw.githubusercontent.com/rupa/z/master/z.sh -o ~/z.sh
+}
+
 #### COMMAND ###################################################################
 
 function install_common_tools {
   install_ohmyzsh
+  install_z
 
   install_apt curl
   install_apt git

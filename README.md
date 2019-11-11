@@ -80,9 +80,8 @@ FORCE_INSTALLATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
 
 ## ✏️ ToDo
 
-* Install tools: Z, ...
+* Configure more symlinks
+* Configure desktop: gnome & gnome-terminal
 * Install more developments tools
 * Install more desktop tools
 * Install more vscode extensions
-* Add more symlinks: `.vimrc`, `.curlrc`, ...
-* Configure desktop: gnome & gnome-terminal
