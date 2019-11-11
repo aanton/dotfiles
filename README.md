@@ -73,6 +73,9 @@ FORCE_INSTALLATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
 # Command: Install development tools
 # Confirmation is required for each tool depending on the FORCE_INSTALLATION environment variable
 ./install.sh install_dev_tools
+
+# Command: Install vscode extensions
+./install.sh install_vscode_extensions
 ```
 
 ## ✏️ ToDo

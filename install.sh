@@ -16,6 +16,7 @@ Available commands:
 • install_desktop_tools: Install desktop tools
 • install_dev_tools: Install development tools
 • install_fonts: Install fonts
+• install_vscode_extensions: Install vscode extensions
 
 EOT
 )
