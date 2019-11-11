@@ -74,3 +74,4 @@ function main {
 }
 
 main "$@"
+print_info "Command finished: $COMMAND"
