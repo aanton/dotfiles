@@ -29,27 +29,41 @@ The scripts behaviours can be changed with these environment variables:
 * `FORCE_INSTALLATION`: Force installing the optional tools
 
 ```bash
-# Create symlinks
-./install.sh create_symlinks
-
-# Create local configuration files
-./install.sh create_local_configs
-
-# Configure scripts behaviours
 export DISABLE_APT_UPDATE=true
 export FORCE_INSTALLATION=true
+```
 
-# Install tools
+There are two usage alternatives:
+* Run the "all-in-one" command to configure the dotfiles & install the tools
+* Run commands step by step
+
+```bash
+# Display all available commands
+./install.sh
+
+# Run the "all-in-one" command but asking for some optional tools
+FORCE_INSTALLATION=false ./install.sh all
+
+# Run the "all-in-one" command forcing the installation of the optional tools
+FORCE_INSTALLATION=true ./install.sh all
+
+# Command: Create symlinks
+./install.sh create_symlinks
+
+# Command: Create local configuration files
+./install.sh create_local_configs
+
+# Command: Install tools
 ./install.sh install_tools
 
-# Install fonts
+# Command: Install fonts
 ./install.sh install_fonts
 
-# Install desktop tools (only in GUI environments)
+# Command: Install desktop tools (only in GUI environments)
 # Confirmation is required for some tools depending on the FORCE_INSTALLATION environment variable
 ./install.sh install_desktop_tools
 
-# Install development tools
+# Command: Install development tools
 # Confirmation is required for each tool depending on the FORCE_INSTALLATION environment variable
 ./install.sh install_dev_tools
 ```
