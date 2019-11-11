@@ -30,7 +30,7 @@ EOT
 function run_all_commands {
   update_apt
 
-  COMMANDS_DIR=`dirname $0`/commands
+  COMMANDS_DIR=${PROJECTDIR}/commands
   for COMMAND in $(ls -1 $COMMANDS_DIR); do
     . ${COMMANDS_DIR}/${COMMAND}
   done
@@ -49,7 +49,7 @@ function run_command {
   local -r $COMMAND=$1
 
   # Check if the command exists
-  COMMAND_SCRIPT=`dirname $0`/commands/${COMMAND}.sh
+  COMMAND_SCRIPT=${PROJECTDIR}/commands/${COMMAND}.sh
   if [ ! -f "$COMMAND_SCRIPT" ]; then
     print_error "Unknown command: $COMMAND"
     usage
