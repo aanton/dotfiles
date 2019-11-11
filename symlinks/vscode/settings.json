@@ -27,7 +27,7 @@
   "window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",
   "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "One Dark Pro Vivid",
+  "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile"
 }

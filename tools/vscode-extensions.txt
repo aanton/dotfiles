@@ -1,3 +1,4 @@
+arcticicestudio.nord-visual-studio-code
 bierner.emojisense
 bmewburn.vscode-intelephense-client
 dakara.transformer
@@ -10,4 +11,3 @@ ryu1kn.partial-diff
 sleistner.vscode-fileutils
 softwareape.numbermonger
 Tyriar.lorem-ipsum
-zhuangtongfa.Material-theme
