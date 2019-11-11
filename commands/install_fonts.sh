@@ -1,9 +1,9 @@
 #!/bin/bash
 
-. `dirname $0`/core.sh
-
 FONTS_DIR="${HOME}/.local/share/fonts"
 RELOAD_FONTS=false
+
+#### AUXILIARY FUNCTIONS #######################################################
 
 function create_fonts_dir {
   if [ -d "${FONTS_DIR}" ]; then
@@ -70,7 +70,11 @@ function install_fonts_nerd {
   fi
 }
 
-create_fonts_dir
-install_fonts_firacode
-install_fonts_nerd
-reload_fonts
+#### COMMAND ###################################################################
+
+function install_fonts {
+  create_fonts_dir
+  install_fonts_firacode
+  install_fonts_nerd
+  reload_fonts
+}

@@ -78,6 +78,14 @@ function print_in_color {
   printf "%b" "$(tput setaf $2)" "$1" "$(tput sgr0)"
 }
 
+function print_error {
+  print_in_color "$1\n" 1
+}
+
+function print_warning {
+  print_in_color "$1\n" 3
+}
+
 function print_info {
   print_in_color "$1\n" 2
 }
