@@ -79,6 +79,9 @@ alias gpull="git fetch -p && git pull --ff-only"
 alias gpush="git push origin HEAD"
 alias glast="git show -1"
 
+# Z
+[ -f ~/z.sh ] && source ~/z.sh
+
 # fzf
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
