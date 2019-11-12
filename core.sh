@@ -69,7 +69,7 @@ function ask_for_installation {
     return 0
   fi
 
-  print_question "Do you want to install $1 ? (y/n)"
+  print_question "Do you want to install $1 ? (y/N)"
   read
   [[ "$REPLY" =~ ^[Yy]$ ]] && return 0 || return 1
 }
