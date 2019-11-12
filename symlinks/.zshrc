@@ -108,3 +108,4 @@ if [ -f ~/.fzf.zsh ]; then
 fi
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.functions.sh ] && source ~/.functions.sh
