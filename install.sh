@@ -31,24 +31,18 @@ EOT
 function run_all_commands {
   update_apt
 
-  COMMANDS_DIR=${PROJECTDIR}/commands
-  for COMMAND in $(ls -1 $COMMANDS_DIR); do
-    . ${COMMANDS_DIR}/${COMMAND}
+  local -r COMMANDS=( create_symlinks create_local_configs install_common_tools install_fonts install_desktop_tools install_dev_tools configure_gnome )
+  local COMMAND
+  for COMMAND in "${COMMANDS[@]}"; do
+    run_command "${COMMAND}" false
   done
-
-  create_symlinks
-  create_local_configs
-  install_common_tools
-  install_fonts
-  install_desktop_tools
-  install_dev_tools
-  configure_gnome
 }
 
 #### COMMAND: RUN ONE ##########################################################
 
 function run_command {
   local -r $COMMAND=$1
+  local UPDATE_APT=${2:-true}
 
   # Check if the command exists
   COMMAND_SCRIPT=${PROJECTDIR}/commands/${COMMAND}.sh
@@ -58,11 +52,12 @@ function run_command {
   fi
 
   # Update APT but only in some commands
-  if [[ $COMMAND == install*tools ]]; then
+  if [[ $COMMAND == install*tools && "$UPDATE_APT" == true ]]; then
     update_apt
   fi
 
   # Load the command file & execute it
+  print_info "Running command: ${COMMAND} ..."
   . $COMMAND_SCRIPT
   $COMMAND
 }
