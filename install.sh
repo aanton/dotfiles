@@ -10,6 +10,7 @@ Usage: install.sh <command>
 
 Available commands:
 • all: Configure dotfiles & install all tools
+• configure_gnome: Configure gnome desktop & terminal
 • create_local_configs: Create local configuration files
 • create_symlinks: Create symbolic links for configuration files
 • install_common_tools: Install common tools
@@ -41,6 +42,7 @@ function run_all_commands {
   install_fonts
   install_desktop_tools
   install_dev_tools
+  configure_gnome
 }
 
 #### COMMAND: RUN ONE ##########################################################

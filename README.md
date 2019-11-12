@@ -76,6 +76,9 @@ FORCE_INSTALLATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
 
 # Command: Install vscode extensions
 ./install.sh install_vscode_extensions
+
+# Command: Configure gnome desktop & terminal
+./install.sh configure_gnome
 ```
 
 ## ✏️ ToDo
