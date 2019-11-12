@@ -7,6 +7,7 @@ function install_desktop_tools {
     return 0
   fi
 
+  install_apt byzanz byzanz-record
   install_apt meld
   install_manual clipit
   install_manual google-chrome
