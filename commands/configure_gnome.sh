@@ -40,6 +40,7 @@ EOT
 
 function configure_gnome {
   if [[ -v SKIP_DESKTOP_TOOLS && "$SKIP_DESKTOP_TOOLS" = true ]]; then
+    print_warning "Skipping configuration of gnome desktop & terminal"
     return 0
   fi
 

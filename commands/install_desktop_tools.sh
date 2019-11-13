@@ -4,6 +4,7 @@
 
 function install_desktop_tools {
   if [[ -v SKIP_DESKTOP_TOOLS && "$SKIP_DESKTOP_TOOLS" = true ]]; then
+    print_warning "Skipping installation of the desktop tools"
     return 0
   fi
 
