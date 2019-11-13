@@ -29,12 +29,10 @@ EOT
 #### COMMAND: RUN ALL ##########################################################
 
 function run_all_commands {
-  update_apt
-
   local -r COMMANDS=( create_symlinks create_local_configs install_common_tools install_fonts install_desktop_tools install_dev_tools configure_gnome )
   local COMMAND
   for COMMAND in "${COMMANDS[@]}"; do
-    run_command "${COMMAND}" false
+    run_command "${COMMAND}"
   done
 }
 
@@ -42,18 +40,12 @@ function run_all_commands {
 
 function run_command {
   local -r $COMMAND=$1
-  local UPDATE_APT=${2:-true}
 
   # Check if the command exists
   COMMAND_SCRIPT=${PROJECTDIR}/commands/${COMMAND}.sh
   if [ ! -f "$COMMAND_SCRIPT" ]; then
     print_error "Unknown command: $COMMAND"
     usage
-  fi
-
-  # Update APT but only in some commands
-  if [[ $COMMAND == install*tools && "$UPDATE_APT" == true ]]; then
-    update_apt
   fi
 
   # Load the command file & execute it
@@ -69,6 +61,12 @@ function main {
   [ $# -eq 0 ] && usage
 
   COMMAND="$1"
+
+  # Update APT but only in some commands
+  if [[ $COMMAND == all || $COMMAND == install*tools ]]; then
+    update_apt
+  fi
+
   case $COMMAND in
     all)
       run_all_commands
