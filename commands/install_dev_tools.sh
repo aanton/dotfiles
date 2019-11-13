@@ -3,6 +3,8 @@
 #### COMMAND ###################################################################
 
 function install_dev_tools {
+  install_apt shellcheck
+
   ask_for_installation docker && install_manual docker
   ask_for_installation docker-compose && install_manual docker-compose
   ask_for_installation "php & php extensions" && install_manual php
