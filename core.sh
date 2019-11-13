@@ -5,6 +5,7 @@ DATETIME=$(date +%Y%m%d%H%M%S)
 
 function update_apt {
   if [[ -v SKIP_APT_UPDATE && "$SKIP_APT_UPDATE" = true ]]; then
+    print_warning "Skipping updating APT"
     return 0
   fi
 
@@ -71,7 +72,12 @@ function ask_for_installation {
 
   print_question "Do you want to install $1 ? (y/N)"
   read
-  [[ "$REPLY" =~ ^[Yy]$ ]] && return 0 || return 1
+  if [[ ! "$REPLY" =~ ^[Yy]$ ]]; then
+      print_warning "Skipping installing app: $1"
+      return 1
+  fi
+
+  return 0
 }
 
 function print_in_color {
