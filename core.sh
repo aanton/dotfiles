@@ -66,14 +66,27 @@ function create_symlink {
 }
 
 function ask_for_installation {
-  if [[ -v FORCE_INSTALLATION && "$FORCE_INSTALLATION" = true ]]; then
+  local -r APP=$1
+  ask_for_confirmation "Do you want to install ${APP} ?" "Skipping installing app: ${APP}"
+}
+
+function ask_for_configuration {
+  local -r TOOL=$1
+  ask_for_confirmation "Do you want to configure ${TOOL} ?" "Skipping configuring: ${TOOL}"
+}
+
+function ask_for_confirmation {
+  local -r QUESTION_MESSAGE=$1
+  local -r SKIPPING_MESSAGE=$2
+
+  if [[ -v SKIP_CONFIRMATION && "$SKIP_CONFIRMATION" = true ]]; then
     return 0
   fi
 
-  print_question "Do you want to install $1 ? (y/N)"
+  print_question "${QUESTION_MESSAGE} (y/N)"
   read
   if [[ ! "$REPLY" =~ ^[Yy]$ ]]; then
-      print_warning "Skipping installing app: $1"
+      print_warning "${SKIPPING_MESSAGE}"
       return 1
   fi
 

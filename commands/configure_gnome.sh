@@ -44,5 +44,5 @@ function configure_gnome {
     return 0
   fi
 
-  ask_for_installation "gnome-terminal \"default\" profile" && configure_gnome_terminal
+  ask_for_configuration "gnome-terminal \"default\" profile" && configure_gnome_terminal
 }

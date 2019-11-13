@@ -25,13 +25,13 @@ echo $SHELL
 Before running these scripts, you should review them & modify them according to your needs.
 
 The scripts behaviours can be changed with these environment variables:
-* `FORCE_INSTALLATION`: Force installing the optional tools
 * `SKIP_APT_UPDATE`: Avoid updating APT before installing the tools
+* `SKIP_CONFIRMATION`: Avoid asking for confirmation to install/configure some optional tools
 * `SKIP_DESKTOP_TOOLS`: Avoid installing desktop tools
 
 ```bash
-export FORCE_INSTALLATION=true
 export SKIP_APT_UPDATE=true
+export SKIP_CONFIRMATION=true
 export SKIP_DESKTOP_TOOLS=true
 ```
 
@@ -43,14 +43,14 @@ There are two usage alternatives:
 # Display all available commands
 ./install.sh
 
-# Run the "all-in-one" command but asking for some optional tools
-FORCE_INSTALLATION=false ./install.sh all
+# Run the "all-in-one" command (optional tools will require confirmation)
+SKIP_CONFIRMATION=false ./install.sh all
 
-# Run the "all-in-one" command forcing the installation of the optional tools
-FORCE_INSTALLATION=true ./install.sh all
+# Run the "all-in-one" command without confirming the optional tools
+SKIP_CONFIRMATION=true ./install.sh all
 
-# Run the "all-in-one" command forcing the installation of the optional tools but skipping the desktop tools
-FORCE_INSTALLATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
+# Run the "all-in-one" command without confirming the optional tools, but skipping the desktop tools
+SKIP_CONFIRMATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
 ```
 
 ```bash
@@ -67,17 +67,18 @@ FORCE_INSTALLATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
 ./install.sh install_fonts
 
 # Command: Install desktop tools (only in GUI environments)
-# Confirmation is required for some tools depending on the FORCE_INSTALLATION environment variable
+# Confirmation is required for some tools (can be skipped using SKIP_CONFIRMATION)
 ./install.sh install_desktop_tools
 
 # Command: Install development tools
-# Confirmation is required for each tool depending on the FORCE_INSTALLATION environment variable
+# Confirmation is required for some tools (can be skipped using SKIP_CONFIRMATION)
 ./install.sh install_dev_tools
 
 # Command: Install vscode extensions
 ./install.sh install_vscode_extensions
 
 # Command: Configure gnome desktop & terminal
+# Confirmation is required (can be skipped using SKIP_CONFIRMATION)
 ./install.sh configure_gnome
 ```
 
