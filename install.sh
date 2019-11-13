@@ -39,7 +39,7 @@ function run_all_commands {
 #### COMMAND: RUN ONE ##########################################################
 
 function run_command {
-  local -r $COMMAND=$1
+  local -r COMMAND=$1
 
   # Check if the command exists
   COMMAND_SCRIPT=${PROJECTDIR}/commands/${COMMAND}.sh
