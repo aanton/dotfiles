@@ -42,7 +42,7 @@ function run_command {
   local -r COMMAND=$1
 
   # Check if the command exists
-  COMMAND_SCRIPT=${PROJECTDIR}/commands/${COMMAND}.sh
+  local -r COMMAND_SCRIPT=${PROJECTDIR}/commands/${COMMAND}.sh
   if [ ! -f "$COMMAND_SCRIPT" ]; then
     print_error "Unknown command: $COMMAND"
     usage
