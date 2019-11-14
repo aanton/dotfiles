@@ -28,15 +28,15 @@ function install_common_tools {
   install_ohmyzsh
   install_z
 
-  install_apt curl
-  install_apt git
-  install_apt htop
-  install_apt httpie http
-  install_apt jq
-  install_apt tree
-  install_apt vim
+  install_app curl
+  install_app git
+  install_app htop
+  install_app httpie http
+  install_app jq
+  install_app tree
+  install_app vim
 
-  install_manual fd
-  install_manual fzf
-  install_manual ripgrep rg
+  install_app fd
+  install_app fzf
+  install_app ripgrep rg
 }

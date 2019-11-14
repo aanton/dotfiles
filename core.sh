@@ -39,21 +39,16 @@ function check_app_installed {
   return 0
 }
 
-function install_apt {
-  check_app_installed "$@"
+function install_app {
+  check_app_installed "$@" && return 0
 
-  if [ $? -ne 0 ]; then
+  local -r TOOL_SCRIPT=${PROJECTDIR}/tools/${1}.sh
+  if [ -f "$TOOL_SCRIPT" ]; then
+    print_info "Installing manual app: $1 ..."
+    . ${TOOL_SCRIPT}
+  else
     print_info "Installing APT app: $1 ..."
     sudo apt install -y $1
-  fi
-}
-
-function install_manual {
-  check_app_installed "$@"
-
-  if [ $? -ne 0 ]; then
-    print_info "Installing manual app: $1 ..."
-    . ${PROJECTDIR}/tools/$1.sh
   fi
 }
 

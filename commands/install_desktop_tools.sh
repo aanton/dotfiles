@@ -8,12 +8,12 @@ function install_desktop_tools {
     return 0
   fi
 
-  install_apt meld
-  install_manual clipit
-  install_manual google-chrome
-  install_manual vscode code
+  install_app meld
+  install_app clipit
+  install_app google-chrome
+  install_app vscode code
 
   print_info "Installing optional desktop tools ..."
-  ask_for_installation byzanz && install_apt byzanz byzanz-record
-  ask_for_installation filezilla && install_apt filezilla
+  ask_for_installation byzanz && install_app byzanz byzanz-record
+  ask_for_installation filezilla && install_app filezilla
 }
