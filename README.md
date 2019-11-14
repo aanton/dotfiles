@@ -64,8 +64,8 @@ SKIP_CONFIRMATION=true SKIP_DESKTOP_TOOLS=true ./install.sh all
 # Command: Create local configuration files
 ./install.sh create_local_configs
 
-# Command: Install tools
-./install.sh install_tools
+# Command: Install common tools
+./install.sh install_common_tools
 
 # Command: Install fonts
 ./install.sh install_fonts
