@@ -1,6 +1,6 @@
 # aanton/dotfiles
 
-Scripts to install the dotfiles & tools that i use in 🐧 Linux machines.
+Scripts to install the dotfiles & tools that i use in 🐧 Debian-based Linux distributions.
 
 Inspired by:
 * https://github.com/victoriadrake/dotfiles
@@ -30,9 +30,13 @@ The scripts behaviours can be changed with these environment variables:
 * `SKIP_DESKTOP_TOOLS`: Avoid installing desktop tools
 
 ```bash
+# Environment variables can be set before running the scripts ...
 export SKIP_APT_UPDATE=true
 export SKIP_CONFIRMATION=true
 export SKIP_DESKTOP_TOOLS=true
+
+# but also when running the scripts
+SKIP_APT_UPDATE=true SKIP_CONFIRMATION=true SKIP_DESKTOP_TOOLS=true ./install.sh <command>
 ```
 
 There are two usage alternatives:
