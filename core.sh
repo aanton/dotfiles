@@ -4,12 +4,25 @@ PROJECTDIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 DATETIME=$(date +%Y%m%d%H%M%S)
 
 function update_apt {
+  enable_apt_universe_repository
+
   if [[ -v SKIP_APT_UPDATE && "$SKIP_APT_UPDATE" = true ]]; then
     print_warning "Skipping updating APT"
     return 0
   fi
 
+  print_info "Updating APT repositories ..."
   sudo apt update
+}
+
+function enable_apt_universe_repository {
+  local -r VERSION=$(lsb_release -a 2>/dev/null | fgrep Codename | cut -f2)
+
+  apt-cache policy | fgrep "$VERSION/universe" &> /dev/null
+  if [ $? -ne 0 ]; then
+    print_info "Enabling APT universe repository ..."
+    sudo add-apt-repository universe
+  fi
 }
 
 function check_app_installed {
