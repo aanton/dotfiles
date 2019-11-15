@@ -17,6 +17,7 @@ Available commands:
 • install_desktop_tools: Install desktop tools
 • install_dev_tools: Install development tools
 • install_fonts: Install fonts
+• install_tool: Install an specified tool
 • install_vscode_extensions: Install vscode extensions
 
 EOT
@@ -70,6 +71,11 @@ function main {
   case $COMMAND in
     all)
       run_all_commands
+      ;;
+
+    install_tool)
+      shift
+      install_app "$@"
       ;;
 
     *)
