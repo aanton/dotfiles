@@ -25,7 +25,7 @@ function enable_apt_universe_repository {
   fi
 }
 
-function check_app_installed {
+function __check_app_installed {
   local -r APP=$1
   local -r CHECK=${2:-$1}
 
@@ -40,15 +40,25 @@ function check_app_installed {
 }
 
 function install_app {
-  check_app_installed "$@" && return 0
+  __check_app_installed "$@" && return 0
+  __install_app "$@"
+}
 
-  local -r TOOL_SCRIPT=${PROJECTDIR}/tools/${1}.sh
+function install_app_with_confimation {
+  __check_app_installed "$@" && return 0
+  __ask_for_installation "$@" && __install_app "$@"
+}
+
+function __install_app {
+  local -r APP=$1
+  local -r TOOL_SCRIPT=${PROJECTDIR}/tools/${APP}.sh
+
   if [ -f "$TOOL_SCRIPT" ]; then
-    print_info "Installing manual app: $1 ..."
+    print_info "Installing manual app: $APP ..."
     . ${TOOL_SCRIPT}
   else
-    print_info "Installing APT app: $1 ..."
-    sudo apt install -y $1
+    print_info "Installing APT app: $APP ..."
+    sudo apt install -y $APP
   fi
 }
 
@@ -73,17 +83,17 @@ function create_symlink {
   ln -s ${SOURCE} ${DESTINATION}
 }
 
-function ask_for_installation {
+function __ask_for_installation {
   local -r APP=$1
-  ask_for_confirmation "Do you want to install ${APP} ?" "Skipping installing app: ${APP}"
+  __ask_for_confirmation "Do you want to install ${APP} ?" "Skipping installing app: ${APP}"
 }
 
 function ask_for_configuration {
   local -r TOOL=$1
-  ask_for_confirmation "Do you want to configure ${TOOL} ?" "Skipping configuring: ${TOOL}"
+  __ask_for_confirmation "Do you want to configure ${TOOL} ?" "Skipping configuring: ${TOOL}"
 }
 
-function ask_for_confirmation {
+function __ask_for_confirmation {
   local -r QUESTION_MESSAGE=$1
   local -r SKIPPING_MESSAGE=$2
 
@@ -94,29 +104,29 @@ function ask_for_confirmation {
   print_question "${QUESTION_MESSAGE} (y/N)"
   read
   if [[ ! "$REPLY" =~ ^[Yy]$ ]]; then
-      print_warning "${SKIPPING_MESSAGE}"
-      return 1
+    print_warning "${SKIPPING_MESSAGE}"
+    return 1
   fi
 
   return 0
 }
 
-function print_in_color {
+function __print_in_color {
   printf "%b" "$(tput setaf $2)" "$1" "$(tput sgr0)"
 }
 
 function print_error {
-  print_in_color "$1\n" 1
+  __print_in_color "$1\n" 1
 }
 
 function print_warning {
-  print_in_color "$1\n" 3
+  __print_in_color "$1\n" 3
 }
 
 function print_info {
-  print_in_color "$1\n" 2
+  __print_in_color "$1\n" 2
 }
 
 function print_question {
-  print_in_color "$1 " 3
+  __print_in_color "$1 " 3
 }

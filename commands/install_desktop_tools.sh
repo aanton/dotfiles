@@ -12,8 +12,6 @@ function install_desktop_tools {
   install_app clipit
   install_app google-chrome
   install_app vscode code
-
-  print_info "Installing optional desktop tools ..."
-  ask_for_installation byzanz && install_app byzanz byzanz-record
-  ask_for_installation filezilla && install_app filezilla
+  install_app_with_confimation byzanz byzanz-record
+  install_app_with_confimation filezilla
 }
