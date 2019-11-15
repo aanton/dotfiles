@@ -2,9 +2,5 @@
 
 . ${PROJECTDIR}/commands/create_symlinks.sh
 
-function install_clipit {
-  sudo apt install clipit
-}
-
-install_clipit
+install_app clipit
 create_clipit_symlinks
