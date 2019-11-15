@@ -107,5 +107,9 @@ if [ -f ~/.fzf.zsh ]; then
   alias gbranch="git branch -vv | fzf +m | awk '{print \$1}' | xargs -n1 -I{} git checkout {}"
 fi
 
+# copy&paste
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.functions.sh ] && source ~/.functions.sh

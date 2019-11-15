@@ -35,6 +35,7 @@ function install_common_tools {
   install_app jq
   install_app tree
   install_app vim
+  install_app xclip
 
   install_app fd
   install_app fzf
