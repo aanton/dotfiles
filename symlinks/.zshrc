@@ -113,3 +113,8 @@ alias pbpaste="xclip -selection clipboard -o"
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.functions.sh ] && source ~/.functions.sh
+
+# Replace Agnoster prompt directory to hide subdirectories
+prompt_dir() {
+  prompt_segment blue black "`echo "${PWD/#$HOME/~}" | sed -E 's#^(~?/[^/]+/).+(/[^/]+)$#\1...\2#'`"
+}
