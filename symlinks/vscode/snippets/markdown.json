@@ -13,6 +13,15 @@
 		],
 		"description": "Insert code block"
 	},
+	"Insert JS block": {
+		"prefix": "`js",
+		"body": [
+			"```js",
+			"$0",
+			"```"
+		],
+		"description": "Insert JS block"
+	},
 	"Insert shell block": {
 		"prefix": "`s",
 		"body": [
