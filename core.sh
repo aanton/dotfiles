@@ -46,7 +46,7 @@ function install_app {
 
 function install_app_with_confimation {
   __check_app_installed "$@" && return 0
-  __ask_for_installation "$@" && __install_app "$@"
+  ask_for_installation "$@" && __install_app "$@"
 }
 
 function __install_app {
@@ -83,9 +83,9 @@ function create_symlink {
   ln -s ${SOURCE} ${DESTINATION}
 }
 
-function __ask_for_installation {
+function ask_for_installation {
   local -r APP=$1
-  __ask_for_confirmation "Do you want to install ${APP} ?" "Skipping installing app: ${APP}"
+  __ask_for_confirmation "Do you want to install ${APP} ?" "Skipping installing: ${APP}"
 }
 
 function ask_for_configuration {
