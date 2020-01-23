@@ -20,6 +20,9 @@ Available commands:
 • install_tool: Install an specified tool
 • install_vscode_extensions: Install vscode extensions
 
+Extra commands:
+• check_vscode_extensions: Check documented VS installed vscode extensions
+
 EOT
 )
   print_warning "$USAGE"
