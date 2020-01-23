@@ -53,6 +53,25 @@ function install_fonts_firacode {
   done
 }
 
+function install_fonts_jetbrains {
+  local -r REPOSITORY="https://github.com/JetBrains/JetBrainsMono"
+
+  for TYPE in Bold Bold-Italic ExtraBold ExtraBold-Italic Italic Medium Medium-Italic Regular; do
+    local NAME="JetBrainsMono-${TYPE}.ttf"
+
+    check_font_installed "$NAME"
+    if [ $? -ne 0 ]; then
+      print_info "Installing font: ${NAME} ..."
+
+      local SOURCE="${REPOSITORY}/blob/master/ttf/${NAME}?raw=true"
+      local DESTINATION="${FONTS_DIR}/${NAME}"
+
+      curl -L "${SOURCE}" -o "${DESTINATION}"
+      RELOAD_FONTS=true
+    fi
+  done
+}
+
 function install_fonts_nerd {
   local -r REPOSITORY="https://github.com/ryanoasis/nerd-fonts"
   local -r NAME="Ubuntu Mono Nerd Font Complete Mono.ttf"
@@ -75,6 +94,7 @@ function install_fonts_nerd {
 function install_fonts {
   create_fonts_dir
   install_fonts_firacode
+  install_fonts_jetbrains
   install_fonts_nerd
   reload_fonts
 }
