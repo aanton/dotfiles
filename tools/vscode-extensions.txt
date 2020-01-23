@@ -3,6 +3,7 @@ bierner.emojisense
 bmewburn.vscode-intelephense-client
 dakara.transformer
 eamodio.gitlens
+formulahendry.code-runner
 HookyQR.beautify
 mikestead.dotenv
 ms-azuretools.vscode-docker
