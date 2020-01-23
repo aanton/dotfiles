@@ -5,6 +5,7 @@ dakara.transformer
 eamodio.gitlens
 formulahendry.code-runner
 HookyQR.beautify
+mads-hartmann.bash-ide-vscode
 mikestead.dotenv
 ms-azuretools.vscode-docker
 oderwat.indent-rainbow
