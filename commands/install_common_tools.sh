@@ -37,6 +37,7 @@ function install_common_tools {
   install_app vim
   install_app xclip
 
+  install_app bat
   install_app fd
   install_app fzf
   install_app ripgrep rg
