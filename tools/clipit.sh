@@ -2,5 +2,5 @@
 
 . ${PROJECTDIR}/commands/create_symlinks.sh
 
-install_app clipit
+sudo apt-get install -y clipit
 create_clipit_symlinks
