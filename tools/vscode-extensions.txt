@@ -4,6 +4,7 @@ bmewburn.vscode-intelephense-client
 dakara.transformer
 eamodio.gitlens
 HookyQR.beautify
+mikestead.dotenv
 ms-azuretools.vscode-docker
 oderwat.indent-rainbow
 richie5um2.vscode-sort-json
