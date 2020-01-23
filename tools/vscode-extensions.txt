@@ -11,4 +11,5 @@ ryu1kn.partial-diff
 sleistner.vscode-fileutils
 softwareape.numbermonger
 techer.open-in-browser
+thomas-baumgaertner.vcl
 Tyriar.lorem-ipsum
