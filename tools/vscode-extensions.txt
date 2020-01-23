@@ -10,4 +10,5 @@ richie5um2.vscode-sort-json
 ryu1kn.partial-diff
 sleistner.vscode-fileutils
 softwareape.numbermonger
+techer.open-in-browser
 Tyriar.lorem-ipsum
