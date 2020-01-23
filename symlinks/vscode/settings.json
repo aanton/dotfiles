@@ -2,7 +2,7 @@
   "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.fontFamily": "Fira Code, Ubuntu Mono",
+  "editor.fontFamily": "JetBrains Mono, Fira Code, Ubuntu Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.enabled": false,
