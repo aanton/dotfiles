@@ -44,7 +44,7 @@ function install_app {
   __install_app "$@"
 }
 
-function install_app_with_confimation {
+function install_app_with_confirmation {
   __check_app_installed "$@" && return 0
   ask_for_installation "$@" && __install_app "$@"
 }

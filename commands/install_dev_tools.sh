@@ -5,9 +5,9 @@
 function install_dev_tools {
   install_app shellcheck
 
-  install_app_with_confimation docker
-  install_app_with_confimation docker-compose
-  install_app_with_confimation php
-  install_app_with_confimation composer
-  install_app_with_confimation node
+  install_app_with_confirmation docker
+  install_app_with_confirmation docker-compose
+  install_app_with_confirmation php
+  install_app_with_confirmation composer
+  install_app_with_confirmation node
 }
