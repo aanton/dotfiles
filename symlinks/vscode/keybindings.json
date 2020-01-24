@@ -164,5 +164,10 @@
     "key": "shift+alt+f12",
       "command": "-references-view.find",
     "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-emojisense.quickEmojitext",
+    "when": "editorTextFocus"
   }
 ]
