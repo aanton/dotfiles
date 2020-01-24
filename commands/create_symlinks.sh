@@ -6,6 +6,8 @@ function create_common_symlinks {
   create_symlink .functions.sh
   create_symlink .gitconfig
   create_symlink .zshrc
+
+  create_symlink .prettierrc
 }
 
 function create_clipit_symlinks {
