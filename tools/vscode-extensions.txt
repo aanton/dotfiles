@@ -5,7 +5,6 @@ dakara.transformer
 eamodio.gitlens
 felixfbecker.php-debug
 formulahendry.code-runner
-HookyQR.beautify
 mads-hartmann.bash-ide-vscode
 mikestead.dotenv
 ms-azuretools.vscode-docker
