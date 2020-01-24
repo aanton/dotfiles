@@ -9,6 +9,7 @@ HookyQR.beautify
 mads-hartmann.bash-ide-vscode
 mikestead.dotenv
 ms-azuretools.vscode-docker
+octref.vetur
 oderwat.indent-rainbow
 richie5um2.vscode-sort-json
 ryu1kn.partial-diff
