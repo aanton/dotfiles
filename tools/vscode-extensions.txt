@@ -3,6 +3,7 @@ bierner.emojisense
 bmewburn.vscode-intelephense-client
 dakara.transformer
 eamodio.gitlens
+felixfbecker.php-debug
 formulahendry.code-runner
 HookyQR.beautify
 mads-hartmann.bash-ide-vscode
