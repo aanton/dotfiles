@@ -36,5 +36,6 @@ function install_dev_tools {
   install_app_with_confirmation node
 
   install_npm_package browser-sync
+  install_npm_package prettier
   install_npm_package surge
 }
