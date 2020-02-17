@@ -7,6 +7,7 @@ eamodio.gitlens
 esbenp.prettier-vscode
 felixfbecker.php-debug
 formulahendry.code-runner
+humao.rest-client
 mads-hartmann.bash-ide-vscode
 mikestead.dotenv
 ms-azuretools.vscode-docker
