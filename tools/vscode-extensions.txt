@@ -4,6 +4,7 @@ bmewburn.vscode-intelephense-client
 dakara.transformer
 dbaeumer.vscode-eslint
 eamodio.gitlens
+EditorConfig.EditorConfig
 esbenp.prettier-vscode
 felixfbecker.php-debug
 formulahendry.code-runner
