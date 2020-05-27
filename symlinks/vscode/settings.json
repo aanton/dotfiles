@@ -29,6 +29,7 @@
   "gitlens.views.lineHistory.enabled": false,
   "gitlens.views.repositories.files.layout": "tree",
   "gitlens.views.search.files.layout": "list",
+  "material-icon-theme.hidesExplorerArrows": true,
   "open-in-browser.default": "google-chrome",
   "php.suggest.basic": false,
   "php.validate.executablePath": "/usr/bin/php",
@@ -40,5 +41,6 @@
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile"
 }
