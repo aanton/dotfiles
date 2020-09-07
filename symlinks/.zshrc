@@ -115,6 +115,38 @@ alias pbpaste="xclip -selection clipboard -o"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.functions.sh ] && source ~/.functions.sh
 
+# nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# http://broken-by.me/lazy-load-nvm/
+lazynvm() {
+  unset -f nvm node npm npx
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+}
+
+nvm() {
+  lazynvm
+  nvm $@
+}
+
+node() {
+  lazynvm
+  node $@
+}
+
+npm() {
+  lazynvm
+  npm $@
+}
+
+npx() {
+  lazynvm
+  npx $@
+}
+
 # Replace Agnoster prompt directory to hide subdirectories
 prompt_dir() {
   prompt_segment blue black "`echo $PWD | sed -E -e "s#$HOME#~#" -e 's#^(~?/[^/]+/).+(/[^/]+)$#\1...\2#'`"
