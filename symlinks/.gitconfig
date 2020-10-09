@@ -31,6 +31,9 @@
 [difftool "meld"]
   cmd = meld "$LOCAL $REMOTE"
 
+[rebase]
+  autosquash = true
+
 [user]
   useConfigOnly = true
 
