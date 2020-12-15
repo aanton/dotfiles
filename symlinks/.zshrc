@@ -57,6 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # When adding a command to the history, remove the older duplicated one
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
+setopt SHAREHISTORY
 
 # Gnome Terminal colors
 # https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
