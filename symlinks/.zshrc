@@ -106,7 +106,7 @@ if [ -f ~/.fzf.zsh ]; then
   # fzf + git aliases
   alias gshow="git log --pretty=oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}' | xargs -n1 -I{} git show {}"
   alias grebase="git log --pretty=oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}' | xargs -o -n1 -I{} git rebase -i {}^"
-  alias gbranch="git branch -vv | fzf +m | awk '{print \$1}' | xargs -n1 -I{} git checkout {}"
+  alias gbranch="git branch -vv | fzf +m --no-preview | awk '{print \$1}' | xargs -n1 -I{} git checkout {}"
 fi
 
 # copy&paste
