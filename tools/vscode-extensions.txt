@@ -2,6 +2,7 @@ arcticicestudio.nord-visual-studio-code
 bierner.emojisense
 bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
+calebporzio.better-phpunit
 dakara.transformer
 dbaeumer.vscode-eslint
 eamodio.gitlens

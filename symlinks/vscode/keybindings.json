@@ -169,5 +169,15 @@
     "key": "ctrl+shift+i",
     "command": "-emojisense.quickEmojitext",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "meta+k meta+p",
+    "command": "-better-phpunit.run-previous",
+    "when": "editorLangId == 'php'"
+  },
+  {
+    "key": "meta+k meta+l",
+    "command": "better-phpunit.run-previous",
+    "when": "editorLangId == 'php'"
   }
 ]
