@@ -10,6 +10,7 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 felixfbecker.php-debug
 formulahendry.code-runner
+fterrag.vscode-php-cs-fixer
 humao.rest-client
 mads-hartmann.bash-ide-vscode
 mikestead.dotenv

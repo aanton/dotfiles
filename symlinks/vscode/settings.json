@@ -1,4 +1,7 @@
 {
+  "[php]": {
+    "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer"
+  },
   "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
