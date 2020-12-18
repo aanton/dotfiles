@@ -1,6 +1,7 @@
 {
   "[php]": {
-    "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer"
+    "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer",
+    "editor.tabSize": 4
   },
   "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
