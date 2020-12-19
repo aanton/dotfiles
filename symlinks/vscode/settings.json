@@ -4,6 +4,7 @@
     "editor.tabSize": 4
   },
   "breadcrumbs.enabled": true,
+  "debug.allowBreakpointsEverywhere": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
