@@ -21,6 +21,7 @@
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80, 120],
   "editor.snippetSuggestions": "top",
   "editor.suggest.localityBonus": true,
   "editor.suggest.statusBar.visible": true,
