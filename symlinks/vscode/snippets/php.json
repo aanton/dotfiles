@@ -9,10 +9,10 @@
 		],
 		"description": ""
 	},
-	"Protected Method": {
+	"Private Method": {
 		"prefix": "pmet",
 		"body": [
-			"protected function $1()",
+			"private function $1()",
 			"{",
 			"    $0",
 			"}"
