@@ -35,10 +35,52 @@
 			"<?php",
 			"",
 			"declare(strict_types=1);",
-			"${1:\nnamespace App;\n}",
+			"",
+			"namespace ${1:App};",
+			"",
 			"class $TM_FILENAME_BASE${2: extends BaseClass implements Interface}",
 			"{",
 			"    $0",
+			"}",
+			""
+		],
+		"description": ""
+	},
+	"PHP Interface": {
+		"prefix": "<?phpinterface",
+		"body": [
+			"<?php",
+			"",
+			"declare(strict_types=1);",
+			"",
+			"namespace ${1:App};",
+			"",
+			"interface $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+			""
+		],
+		"description": ""
+	},
+	"PHP Test Class": {
+		"prefix": "<?phptest",
+		"body": [
+			"<?php",
+			"",
+			"declare(strict_types=1);",
+			"",
+			"namespace ${1:App};",
+			"",
+			"use PHPUnit\\Framework\\TestCase;",
+			"",
+			"class $TM_FILENAME_BASE extends TestCase",
+			"{",
+			"    /** @test */",
+			"    public function it_${2:test_something}(): void",
+			"    {",
+			"        $0",
+			"    }",
 			"}",
 			""
 		],
