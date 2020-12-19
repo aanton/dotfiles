@@ -38,7 +38,7 @@
 			"",
 			"namespace ${1:App};",
 			"",
-			"class $TM_FILENAME_BASE${2: extends BaseClass implements Interface}",
+			"final class $TM_FILENAME_BASE${2: extends BaseClass implements Interface}",
 			"{",
 			"    $0",
 			"}",
