@@ -12,6 +12,7 @@ felixfbecker.php-debug
 formulahendry.code-runner
 fterrag.vscode-php-cs-fixer
 humao.rest-client
+kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
 mikestead.dotenv
 ms-azuretools.vscode-docker
