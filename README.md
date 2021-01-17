@@ -1,6 +1,6 @@
 # aanton/dotfiles
 
-Scripts to install the dotfiles & tools that i use in 🐧 Debian-based Linux distributions.
+Scripts to install the dotfiles & tools that i use in 🐧 Ubuntu 18.04 (it could work on others Debian-based Linux distributions).
 
 Inspired by:
 * https://github.com/victoriadrake/dotfiles
@@ -8,11 +8,14 @@ Inspired by:
 
 ## 👉 Requirements
 
+* Install `git` & `curl`
 * Install ZSH & set it as the default shell
   * Logout & login are required !
   * Verify that ZSH is the default shell
 
 ```bash
+sudo apt install git curl
+
 sudo apt install zsh
 chsh -s "$(which zsh)"
 gnome-session-quit # logout (for Gnome environments)
