@@ -15,4 +15,5 @@ function install_desktop_tools {
   install_app_with_confirmation byzanz byzanz-record
   install_app_with_confirmation filezilla
   install_app_with_confirmation postman
+  install_app_with_confirmation spideroak-one SpiderOakONE
 }
