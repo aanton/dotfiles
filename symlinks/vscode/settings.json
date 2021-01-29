@@ -13,7 +13,6 @@
   "editor.fontFamily": "JetBrains Mono, Fira Code, Ubuntu Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.formatOnPaste": true,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
