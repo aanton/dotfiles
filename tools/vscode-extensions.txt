@@ -21,6 +21,7 @@ oderwat.indent-rainbow
 PKief.material-icon-theme
 richie5um2.vscode-sort-json
 ryu1kn.partial-diff
+shd101wyy.markdown-preview-enhanced
 sleistner.vscode-fileutils
 softwareape.numbermonger
 techer.open-in-browser
