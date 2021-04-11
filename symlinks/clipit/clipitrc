@@ -20,6 +20,6 @@ ellipsize=2
 history_key=<Ctrl><Super>V
 actions_key=
 menu_key=
-search_key=
+search_key=<Ctrl><Super>F
 offline_key=
 offline_mode=false
