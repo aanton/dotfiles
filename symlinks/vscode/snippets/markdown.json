@@ -22,6 +22,15 @@
 		],
 		"description": "Insert JS block"
 	},
+	"Insert TS block": {
+		"prefix": "`ts",
+		"body": [
+			"```ts",
+			"$0",
+			"```"
+		],
+		"description": "Insert TS block"
+	},
 	"Insert shell block": {
 		"prefix": "`s",
 		"body": [
