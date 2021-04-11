@@ -1,6 +1,6 @@
 {
   "[php]": {
-    "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer",
+    // "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer",
     "editor.tabSize": 4
   },
   "breadcrumbs.enabled": true,
@@ -36,6 +36,7 @@
   "gitlens.views.lineHistory.enabled": false,
   "gitlens.views.repositories.files.layout": "tree",
   "gitlens.views.search.files.layout": "list",
+  "markdown-preview-enhanced.enableScriptExecution": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "open-in-browser.default": "google-chrome",
   "php.suggest.basic": false,
@@ -44,11 +45,11 @@
   "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
   "window.newWindowDimensions": "inherit",
   "window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",
+  "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "window.titleBarStyle": "custom"
+  "workbench.startupEditor": "newUntitledFile"
 }
