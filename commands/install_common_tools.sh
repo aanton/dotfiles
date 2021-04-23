@@ -41,4 +41,6 @@ function install_common_tools {
   install_app fd
   install_app fzf
   install_app ripgrep rg
+
+  install_npm_package tldr
 }
