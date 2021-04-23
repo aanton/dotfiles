@@ -3,7 +3,6 @@
     // "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer",
     "editor.tabSize": 4
   },
-  "breadcrumbs.enabled": true,
   "debug.allowBreakpointsEverywhere": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
@@ -20,7 +19,10 @@
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.snippetSuggestions": "top",
   "editor.suggest.localityBonus": true,
   "editor.suggest.statusBar.visible": true,
@@ -50,6 +52,7 @@
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile"
 }
