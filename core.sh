@@ -130,3 +130,38 @@ function print_info {
 function print_question {
   __print_in_color "$1 " 3
 }
+
+function install_npm_package {
+  __check_npm_package_installed "$@" && return 0
+  __install_npm_package "$@"
+}
+
+function install_npm_package_with_confirmation {
+  __check_npm_package_installed "$@" && return 0
+  ask_for_installation "$@" && __install_npm_package "$@"
+}
+
+function __check_npm_package_installed {
+  local -r PACKAGE=$1
+
+  if [[ ! $(which npm) ]]; then
+    print_warning "Package ${PACKAGE} can NOT be installed because npm is missing"
+    return 0
+  fi
+
+  if [[ $(npm list -g --depth=0 | fgrep " ${PACKAGE}@") ]]; then
+    print_info "Package already installed: ${PACKAGE}"
+    return 0
+  fi
+
+  print_info "Package NOT found: ${APP}"
+  return 1
+}
+
+function __install_npm_package {
+  local -r PACKAGE=$1
+  local -r ASK=${2:-"true"}
+
+  print_info "Installing package: ${PACKAGE} ..."
+  sudo npm install -g ${PACKAGE}
+}
