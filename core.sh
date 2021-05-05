@@ -154,7 +154,7 @@ function __check_npm_package_installed {
     return 0
   fi
 
-  print_info "Package NOT found: ${APP}"
+  print_info "Package NOT found: ${PACKAGE}"
   return 1
 }
 
