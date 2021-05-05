@@ -4,7 +4,7 @@
 . ${PROJECTDIR}/commands/create_symlinks.sh
 
 function install_vscode {
-  curl -L https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable -o /tmp/vscode.deb
+  curl -L "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -o /tmp/vscode.deb
   sudo dpkg -i /tmp/vscode.deb
   rm /tmp/vscode.deb
 }
