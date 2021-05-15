@@ -31,6 +31,9 @@
 [difftool "meld"]
   cmd = meld "$LOCAL $REMOTE"
 
+[init]
+  defaultBranch = main
+
 [rebase]
   autosquash = true
 
