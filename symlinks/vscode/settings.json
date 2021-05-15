@@ -57,6 +57,7 @@
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile"
 }
