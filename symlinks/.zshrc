@@ -72,6 +72,8 @@ export LS_COLORS="$LS_COLORS:ow=1;7;94"
 # Git aliases
 alias gd="git diff"
 alias gdd="git difftool -d"
+alias gdr="git diff @{u} @"
+alias gddr="git difftool -d @{u} @"
 alias gs="git status"
 alias ga="git add -u"
 alias gc="git commit -v"
