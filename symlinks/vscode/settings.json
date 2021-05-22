@@ -48,6 +48,7 @@
   "screencastMode.fontSize": 40,
   "screencastMode.onlyKeyboardShortcuts": true,
   "screencastMode.verticalOffset": 0,
+  "template-string-converter.autoRemoveTemplateString": true,
   "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
   "window.newWindowDimensions": "inherit",
   "window.title": "${dirty}${rootName}${separator}${activeEditorMedium}",

@@ -2,9 +2,11 @@ arcticicestudio.nord-visual-studio-code
 bierner.emojisense
 bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
+BriteSnow.vscode-toggle-quotes
 calebporzio.better-phpunit
 dakara.transformer
 dbaeumer.vscode-eslint
+dbankier.vscode-quick-select
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
@@ -14,6 +16,7 @@ fterrag.vscode-php-cs-fixer
 humao.rest-client
 kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
+meganrogge.template-string-converter
 mikestead.dotenv
 ms-azuretools.vscode-docker
 octref.vetur
