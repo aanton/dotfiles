@@ -199,20 +199,5 @@
     "key": "ctrl+shift+[BracketRight]",
     "command": "editor.toggleFold",
     "when": "editorTextFocus && foldingEnabled"
-  },
-  {
-    "key": "ctrl+shift+`",
-    "command": "-workbench.action.terminal.new",
-    "when": "terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+`",
-    "command": "extension.selectEitherQuote",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+k shift+[Comma]",
-    "command": "-extension.selectEitherQuote",
-    "when": "editorFocus"
   }
 ]
