@@ -6,6 +6,7 @@ function create_common_symlinks {
   create_symlink .functions.sh
   create_symlink .gitconfig
   create_symlink .zshrc
+  create_symlink .tmux.conf
 
   create_symlink .prettierrc
 }
