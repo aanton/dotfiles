@@ -33,6 +33,7 @@ function install_common_tools {
   install_app htop
   install_app httpie http
   install_app jq
+  install_app tmux
   install_app tree
   install_app vim
   install_app xclip
