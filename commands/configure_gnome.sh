@@ -13,21 +13,21 @@ function configure_gnome_terminal {
 
   local -r DUMP=$(cat <<EOT
 [/]
-foreground-color='#9494A3A3A5A5'
-visible-name='Dracula'
-palette=['#444447475a5a', '#ffff55555555', '#5050fafa7b7b', '#ffffb8b86c6c', '#8b8be9e9fdfd', '#bdbd9393f9f9', '#ffff7979c6c6', '#9494A3A3A5A5', '#000000000000', '#ffff55555555', '#5050fafa7b7b', '#ffffb8b86c6c', '#8b8be9e9fdfd', '#bdbd9393f9f9', '#ffff7979c6c6', '#ffffffffffff']
-use-system-font=false
-highlight-colors-set=true
-use-theme-colors=false
-font='UbuntuMono Nerd Font Mono 14'
-use-theme-transparency=false
 allow-bold=true
-use-theme-background=false
+background-color='#28282a2a3636'
 bold-color-same-as-fg=true
 bold-color='#9494A3A3A5A5'
-background-color='#28282a2a3636'
+font='UbuntuMono Nerd Font Mono 14'
+foreground-color='#9494A3A3A5A5'
 highlight-background-color='#'
+highlight-colors-set=true
 highlight-foreground-color='#'
+palette=['#444447475a5a', '#ffff55555555', '#5050fafa7b7b', '#ffffb8b86c6c', '#8b8be9e9fdfd', '#bdbd9393f9f9', '#ffff7979c6c6', '#9494A3A3A5A5', '#000000000000', '#ffff55555555', '#5050fafa7b7b', '#ffffb8b86c6c', '#8b8be9e9fdfd', '#bdbd9393f9f9', '#ffff7979c6c6', '#ffffffffffff']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Dracula'
 
 EOT
 )
