@@ -1,8 +1,6 @@
 arcticicestudio.nord-visual-studio-code
-bierner.emojisense
 bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
-BriteSnow.vscode-toggle-quotes
 calebporzio.better-phpunit
 dakara.transformer
 dbaeumer.vscode-eslint
@@ -16,11 +14,15 @@ fterrag.vscode-php-cs-fixer
 humao.rest-client
 kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
+mechatroner.rainbow-csv
 meganrogge.template-string-converter
 mikestead.dotenv
 ms-azuretools.vscode-docker
+ms-vsliveshare.vsliveshare
+ms-vsliveshare.vsliveshare-audio
 octref.vetur
 oderwat.indent-rainbow
+pflannery.vscode-versionlens
 PKief.material-icon-theme
 richie5um2.vscode-sort-json
 ryu1kn.partial-diff
@@ -30,3 +32,4 @@ softwareape.numbermonger
 techer.open-in-browser
 thomas-baumgaertner.vcl
 Tyriar.lorem-ipsum
+VisualStudioExptTeam.vscodeintellicode
