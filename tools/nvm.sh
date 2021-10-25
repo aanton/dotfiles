@@ -10,14 +10,14 @@ export NVM_DIR="$HOME/.nvm" && (
 print_info "Checking nvm installation ..."
 print_info "nvm version is $(nvm --version)"
 
-print_info "Installing node v14 ..."
-nvm install 14
+print_info "Installing node v14 (lts/fermium) ..."
+nvm install lts/fermium
 
-print_info "Installing node v16 ..."
-nvm install 16
+print_info "Installing node v16 (lts/gallium) ..."
+nvm install lts/gallium
 
-print_info "Setting node v14 as default version ..."
-nvm alias default 14
+print_info "Setting node v14 (lts/fermium) as default version ..."
+nvm alias default lts/fermium
 
 print_info "Checking default node & npm versions ..."
 print_info "node version is $(node --version)"
