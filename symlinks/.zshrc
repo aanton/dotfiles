@@ -127,10 +127,10 @@ if [ -f ~/.fzf.zsh ]; then
   bindkey '^P' fzf-file-widget
 
   # fzf + git aliases
-  alias gshow="git log --oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}' | xargs -n1 -I{} git show {}"
-  alias grebase="git log --oneline | fzf +m --preview 'git log -1 --stat {1}' | awk '{print \$1}' | xargs -o -n1 -I{} git rebase -i {}^"
-  alias gbranch="git branch -vv | fzf +m --no-preview | awk '{print \$1}' | xargs -n1 -I{} git checkout {}"
-  alias gtrack="git for-each-ref refs/remotes/ --sort=-committerdate --format='%(refname:short);%(objectname:short);%(committerdate:iso);%(contents:subject);%(authorname)' | column -t -s ';' | fgrep -v origin/HEAD | fzf --preview 'git log -1 --stat {2}' | awk '{print \$1}' | xargs -n1 -I{} git checkout --track {}"
+  alias gshow="git log --oneline | fzf +m --preview 'git log -1 --stat --patch --color=always {1}' | awk '{print \$1}' | xargs -n1 -I{} git show {}"
+  alias grebase="git log --oneline | fzf +m --preview 'git log -1 --stat --patch --color=always {1}' | awk '{print \$1}' | xargs -o -n1 -I{} git rebase -i {}^"
+  alias gbranch="git branch -vv | fzf +m --preview 'git log --pretty=format:\"%h %ad | %s%C(yellow)%d%Creset %C(blue)%an%Creset\" --graph --date=iso --color=always -10 {1}' | awk '{print \$1}' | xargs -n1 -I{} git checkout {}"
+  alias gtrack="git for-each-ref refs/remotes/ --sort=-committerdate --format='%(refname:short);%(objectname:short);%(committerdate:iso);%(contents:subject);%(authorname)' | column -t -s ';' | fgrep -v origin/HEAD | fzf +m --preview 'git log -1 --stat --patch --color=always {2}' | awk '{print \$1}' | xargs -n1 -I{} git checkout --track {}"
 fi
 
 # copy&paste
