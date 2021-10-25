@@ -94,6 +94,11 @@ alias gpull="git fetch -p && git pull --ff-only"
 alias gpush="git push origin HEAD"
 alias glast="git show -1"
 
+# NPM packages aliases (using npx)
+alias tldr="npx tldr"
+alias surge="npx surge"
+alias servor="npx servor"
+
 # Z
 [ -f ~/z.sh ] && source ~/z.sh
 
