@@ -139,37 +139,26 @@ if [ -f ~/.fzf.zsh ]; then
   alias gtrack="git for-each-ref refs/remotes/ --sort=-committerdate --format='%(refname:short);%(objectname:short);%(committerdate:iso);%(contents:subject);%(authorname)' | column -t -s ';' | fgrep -v origin/HEAD | fzf +m --preview 'git log -1 --stat --patch --color=always {2}' | awk '{print \$1}' | xargs -n1 -I{} git checkout --track {}"
 fi
 
-# nvm
+# nvm (lazy loading)
+# https://blog.yo1.dog/better-nvm-lazy-loading/
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
-  # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-  # http://broken-by.me/lazy-load-nvm/
-  lazynvm() {
-    unset -f nvm node npm npx
-
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  }
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
   nvm() {
-    lazynvm
+    unset -f nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
     nvm $@
   }
 
-  node() {
-    lazynvm
-    node $@
-  }
+  DEFAULT_NODE_VER="$( (< "$NVM_DIR/alias/default" || < ~/.nvmrc) 2> /dev/null)"
+  while [ -s "$NVM_DIR/alias/$DEFAULT_NODE_VER" ] && [ ! -z "$DEFAULT_NODE_VER" ]; do
+    DEFAULT_NODE_VER="$(<"$NVM_DIR/alias/$DEFAULT_NODE_VER")"
+  done
 
-  npm() {
-    lazynvm
-    npm $@
-  }
-
-  npx() {
-    lazynvm
-    npx $@
-  }
+  if [ ! -z "$DEFAULT_NODE_VER" ]; then
+    export PATH="$NVM_DIR/versions/node/v${DEFAULT_NODE_VER#v}/bin:$PATH"
+  fi
 fi
 
 # Agnoster theme customizations
