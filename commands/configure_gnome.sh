@@ -14,20 +14,27 @@ function configure_gnome_terminal {
   local -r DUMP=$(cat <<EOT
 [/]
 allow-bold=true
-background-color='#28282a2a3636'
+background-color='#2E3440'
 bold-color-same-as-fg=true
-bold-color='#9494A3A3A5A5'
+bold-color='#D8DEE9'
+cursor-background-color='rgb(216,222,233)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(59,66,82)'
+default-size-columns=200
+default-size-rows=80
 font='UbuntuMono Nerd Font Mono 14'
-foreground-color='#9494A3A3A5A5'
-highlight-background-color='#'
+foreground-color='#D8DEE9'
+highlight-background-color='rgb(136,192,208)'
 highlight-colors-set=true
-highlight-foreground-color='#'
-palette=['#444447475a5a', '#ffff55555555', '#5050fafa7b7b', '#ffffb8b86c6c', '#8b8be9e9fdfd', '#bdbd9393f9f9', '#ffff7979c6c6', '#9494A3A3A5A5', '#000000000000', '#ffff55555555', '#5050fafa7b7b', '#ffffb8b86c6c', '#8b8be9e9fdfd', '#bdbd9393f9f9', '#ffff7979c6c6', '#ffffffffffff']
+highlight-foreground-color='rgb(46,52,64)'
+nord-gnome-terminal-version='0.1.0'
+palette=['#3B4252', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#88C0D0', '#E5E9F0', '#4C566A', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#8FBCBB', '#ECEFF4']
 use-system-font=false
 use-theme-background=false
 use-theme-colors=false
 use-theme-transparency=false
-visible-name='Dracula'
+use-transparent-background=false
+visible-name='Nord'
 
 EOT
 )
