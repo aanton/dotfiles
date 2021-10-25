@@ -147,36 +147,37 @@ alias pbpaste="xclip -selection clipboard -o"
 [ -f ~/.functions.sh ] && source ~/.functions.sh
 
 # nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# http://broken-by.me/lazy-load-nvm/
-lazynvm() {
-  unset -f nvm node npm npx
-
+if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-}
+  # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-nvm() {
-  lazynvm
-  nvm $@
-}
+  # http://broken-by.me/lazy-load-nvm/
+  lazynvm() {
+    unset -f nvm node npm npx
 
-node() {
-  lazynvm
-  node $@
-}
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  }
 
-npm() {
-  lazynvm
-  npm $@
-}
+  nvm() {
+    lazynvm
+    nvm $@
+  }
 
-npx() {
-  lazynvm
-  npx $@
-}
+  node() {
+    lazynvm
+    node $@
+  }
+
+  npm() {
+    lazynvm
+    npm $@
+  }
+
+  npx() {
+    lazynvm
+    npx $@
+  }
+fi
 
 if [ $ZSH_THEME = "agnoster" ]; then
   precmd() {
