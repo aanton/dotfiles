@@ -101,7 +101,18 @@ if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 
   # fzf configuration
-  export FZF_DEFAULT_OPTS="--multi --reverse --border --inline-info --preview '([ -e {} ] && (head -10 {} || tree -C {} | head -10 ) || (echo {})) 2> /dev/null' --preview-window=right:40%:wrap"
+  export FZF_DEFAULT_OPTS="
+    --multi
+    --reverse
+    --border
+    --inline-info
+    --preview '([ -e {} ] && (head -10 {} || tree -C {} | head -10 ) || (echo {})) 2> /dev/null'
+    --preview-window=right:40%:wrap
+    --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b"
+
   export FZF_CTRL_R_OPTS="--no-preview"
   export FZF_DEFAULT_COMMAND="(fd --hidden --exclude .git --follow || git ls-tree -r --name-only HEAD || (find . -path \"*/\.*\" -prune -o -type f -print -o -type l -print | sed s/^..//)) 2> /dev/null"
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
