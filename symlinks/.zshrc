@@ -161,7 +161,13 @@ npx() {
   npx $@
 }
 
-# Replace Agnoster prompt directory to hide subdirectories
-prompt_dir() {
-  prompt_segment blue black "`echo $PWD | sed -E -e "s#$HOME#~#" -e 's#^(~?/[^/]+/).+(/[^/]+)$#\1...\2#'`"
-}
+if [ $ZSH_THEME = "agnoster" ]; then
+  precmd() {
+    print ""
+  }
+
+  # Hide subdirectories in the prompt
+  prompt_dir() {
+    prompt_segment blue black "`echo $PWD | sed -E -e "s#$HOME#~#" -e 's#^(~?/[^/]+/).+(/[^/]+)$#\1...\2#'`"
+  }
+fi
