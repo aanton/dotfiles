@@ -139,13 +139,6 @@ if [ -f ~/.fzf.zsh ]; then
   alias gtrack="git for-each-ref refs/remotes/ --sort=-committerdate --format='%(refname:short);%(objectname:short);%(committerdate:iso);%(contents:subject);%(authorname)' | column -t -s ';' | fgrep -v origin/HEAD | fzf +m --preview 'git log -1 --stat --patch --color=always {2}' | awk '{print \$1}' | xargs -n1 -I{} git checkout --track {}"
 fi
 
-# copy&paste
-alias pbcopy="xclip -selection clipboard"
-alias pbpaste="xclip -selection clipboard -o"
-
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-[ -f ~/.functions.sh ] && source ~/.functions.sh
-
 # nvm
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
@@ -179,6 +172,7 @@ if [ -d "$HOME/.nvm" ]; then
   }
 fi
 
+# Agnoster theme customizations
 if [ $ZSH_THEME = "agnoster" ]; then
   precmd() {
     print ""
@@ -189,3 +183,10 @@ if [ $ZSH_THEME = "agnoster" ]; then
     prompt_segment blue black "`echo $PWD | sed -E -e "s#$HOME#~#" -e 's#^(~?/[^/]+/).+(/[^/]+)$#\1...\2#'`"
   }
 fi
+
+# copy&paste
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.functions.sh ] && source ~/.functions.sh
