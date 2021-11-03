@@ -79,12 +79,15 @@ export LS_COLORS="$LS_COLORS:ow=1;7;94"
 
 # Git aliases
 alias gd="git diff"
+alias gds="git diff --staged"
 alias gdd="git difftool -d"
 alias gdr="git diff @{u} @"
 alias gddr="git difftool -d @{u} @"
 alias gs="git status"
+alias gsb="git status -sb"
 alias ga="git add -u"
 alias gc="git commit -v"
+alias gcA="git commit -v --amend --no-edit"
 alias gco="git checkout"
 alias gl="git log --pretty=format:\"%h %ad | %s%C(yellow)%d%Creset %C(blue)%an%Creset\" --graph --date=iso --all -16"
 alias gl-committer="git log --pretty=format:\"%h %cd | %s%C(yellow)%d%Creset %C(blue)%cn%Creset\" --graph --date=iso --all -16"
@@ -95,6 +98,8 @@ alias gf="git fetch -p"
 alias gpull="git fetch -p && git pull --ff-only"
 alias gpush="git push origin HEAD"
 alias glast="git show -1"
+alias gb='git branch'
+alias gba='git branch -a'
 
 # NPM packages aliases (using npx)
 alias tldr="npx tldr"
