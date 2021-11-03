@@ -114,6 +114,7 @@ if [ -f ~/.fzf.zsh ]; then
     --reverse
     --border
     --inline-info
+    --bind 'ctrl-r:toggle-sort'
     --preview '([ -e {} ] && (head -10 {} || tree -C {} | head -10 ) || (echo {})) 2> /dev/null'
     --preview-window=right:40%:wrap
     --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
