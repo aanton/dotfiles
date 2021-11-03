@@ -22,7 +22,6 @@
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [80, 120],
-  "editor.snippetSuggestions": "top",
   "editor.suggest.localityBonus": true,
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tabCompletion": "on",
@@ -34,6 +33,7 @@
   "gitlens.keymap": "chorded",
   "gitlens.views.repositories.files.layout": "tree",
   "gitlens.views.searchAndCompare.files.layout": "list",
+  "keyboard.dispatch": "keyCode",
   "markdown-preview-enhanced.enableScriptExecution": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "open-in-browser.default": "google-chrome",
@@ -53,8 +53,10 @@
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.keyboardNavigation": "filter",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile"
 }
