@@ -11,6 +11,7 @@ esbenp.prettier-vscode
 felixfbecker.php-debug
 formulahendry.code-runner
 fterrag.vscode-php-cs-fixer
+GitHub.copilot
 humao.rest-client
 kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
