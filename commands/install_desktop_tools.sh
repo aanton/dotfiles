@@ -12,7 +12,6 @@ function install_desktop_tools {
   install_app clipit
   install_app google-chrome
   install_app vscode code
-  install_app_with_confirmation byzanz byzanz-record
   install_app_with_confirmation filezilla
   install_app_with_confirmation postman
   install_app_with_confirmation spideroak-one SpiderOakONE
