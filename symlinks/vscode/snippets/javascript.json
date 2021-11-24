@@ -1,0 +1,38 @@
+{
+	"Function expression": {
+		"prefix": "cfun",
+		"body": [
+			"const $1 = function ($2) {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Export function expression": {
+		"prefix": "ecfun",
+		"body": [
+			"export const $1 = function ($2) {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Arrow function": {
+		"prefix": "afun",
+		"body": [
+			"const $1 = ($2) => {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Export arrow function": {
+		"prefix": "eafun",
+		"body": [
+			"export const $1 = ($2) => {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	}
+}
