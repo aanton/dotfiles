@@ -1,3 +1,4 @@
+adpyke.codesnap
 arcticicestudio.nord-visual-studio-code
 bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
