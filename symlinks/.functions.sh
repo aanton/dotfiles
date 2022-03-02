@@ -52,7 +52,10 @@ if [ -f ~/.fzf.zsh ]; then
     local refFormat="%(refname:short);%(committerdate:iso);%(contents:subject);%(authorname)"
     local preview=$(__preview_git_show)
 
-    git for-each-ref refs/remotes/ --sort=-committerdate --format="$refFormat" | \
+    local tracked_branches=$(git for-each-ref --format='%(refname:short)' refs/heads/ | sed -e 's/^/origin\//' | tr '\n' ';')
+    local untracked_branches=$(git for-each-ref refs/remotes/ --sort=-committerdate --format="$refFormat" | while read line; do remote_branch=$(echo $line | awk -F';' '{print $1}'); if [ -z $(echo $tracked_branches | fgrep "$remote_branch;") ] && [ "$remote_branch" != "origin/HEAD" ]; then echo $line; fi; done;)
+
+    echo "$untracked_branches" | \
       column -t -s ';' | \
       fgrep -v origin/HEAD | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
