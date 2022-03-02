@@ -7,7 +7,6 @@
   "codesnap.containerPadding": "2em",
   "debug.allowBreakpointsEverywhere": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
