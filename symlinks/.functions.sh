@@ -24,7 +24,7 @@ if [ -f ~/.fzf.zsh ]; then
   function gbranch {
     local preview=$(__preview_git_log)
 
-    git branch -vv | \
+    git branch -vv --sort=-committerdate | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
       awk '{print $1}' | \
       xargs -n1 -I{} git checkout {}
