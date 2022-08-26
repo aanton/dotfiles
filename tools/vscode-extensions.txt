@@ -1,18 +1,18 @@
 adpyke.codesnap
 arcticicestudio.nord-visual-studio-code
+bierner.emojisense
 bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
 calebporzio.better-phpunit
 dakara.transformer
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
+denoland.vscode-deno
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
-felixfbecker.php-debug
 formulahendry.code-runner
 fterrag.vscode-php-cs-fixer
-GitHub.copilot
 humao.rest-client
 kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
@@ -35,3 +35,4 @@ techer.open-in-browser
 thomas-baumgaertner.vcl
 Tyriar.lorem-ipsum
 VisualStudioExptTeam.vscodeintellicode
+xdebug.php-debug
