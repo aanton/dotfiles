@@ -99,7 +99,7 @@ alias glm="git log --pretty=format:\"%h %ad | %s%C(yellow)%d%Creset %C(blue)%an%
 alias gl-committer="git log --pretty=format:\"%h %cd | %s%C(yellow)%d%Creset %C(blue)%cn%Creset\" --graph --date=iso --all -16"
 alias gll-committer="git log --pretty=format:\"%h %cd | %s%C(yellow)%d%Creset %C(blue)%cn%Creset\" --graph --date=iso -16"
 alias gf="git fetch -p"
-alias gpull="git fetch -p && git pull --ff-only"
+alias gpull="git pull --ff-only"
 alias gpush="git push origin HEAD"
 alias gb='git branch'
 alias gba='git branch -a'
