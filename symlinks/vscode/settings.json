@@ -34,6 +34,7 @@
   "editor.wordWrap": "on",
   "explorer.openEditors.visible": 0,
   "files.defaultLanguage": "markdown",
+  "git.mergeEditor": false,
   "github.copilot.enable": {
     "*": true,
     "markdown": false,
