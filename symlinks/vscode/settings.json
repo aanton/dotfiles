@@ -66,9 +66,11 @@
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.showTabs": false,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.keyboardNavigation": "filter",
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.visible": false
 }
