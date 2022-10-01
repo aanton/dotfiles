@@ -3,6 +3,7 @@
     // "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer",
     "editor.tabSize": 4
   },
+  "cSpell.language": "en,es-ES",
   "codesnap.backgroundColor": "#81A1C1",
   "codesnap.containerPadding": "2em",
   "debug.allowBreakpointsEverywhere": true,
