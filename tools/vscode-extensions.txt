@@ -13,7 +13,9 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 formulahendry.code-runner
 fterrag.vscode-php-cs-fixer
+GehDoc.vscode-textile-preview
 humao.rest-client
+idleberg.textile
 kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
 mechatroner.rainbow-csv
