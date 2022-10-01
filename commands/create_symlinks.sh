@@ -12,13 +12,6 @@ function create_common_symlinks {
   create_symlink .prettierrc
 }
 
-function create_clipit_symlinks {
-  if [ $(which clipit) ]; then
-    mkdir -p ${HOME}/.config/clipit
-    create_symlink clipit/clipitrc .config/clipit/clipitrc
-  fi
-}
-
 function create_vscode_symlinks {
   if [ $(which code) ]; then
     mkdir -p ${HOME}/.config/Code/User
@@ -33,6 +26,5 @@ function create_vscode_symlinks {
 function create_symlinks {
   create_common_symlinks
 
-  create_clipit_symlinks
   create_vscode_symlinks
 }
