@@ -31,6 +31,8 @@ ryu1kn.partial-diff
 shd101wyy.markdown-preview-enhanced
 sleistner.vscode-fileutils
 softwareape.numbermonger
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-spanish
 techer.open-in-browser
 thomas-baumgaertner.vcl
 Tyriar.lorem-ipsum
