@@ -36,12 +36,6 @@
   "explorer.openEditors.visible": 0,
   "files.defaultLanguage": "markdown",
   "git.mergeEditor": false,
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": false,
-    "plaintext": false,
-    "yaml": false
-  },
   "gitlens.keymap": "chorded",
   "gitlens.views.repositories.files.layout": "tree",
   "gitlens.views.searchAndCompare.files.layout": "list",
