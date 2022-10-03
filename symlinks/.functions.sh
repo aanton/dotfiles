@@ -18,7 +18,7 @@ if [ -f ~/.fzf.zsh ]; then
     git log --oneline | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
       awk '{print $1}' | \
-      xargs -n1 -I{} git show {}
+      xargs -I{} git show {}
   }
 
   function gbranch {
@@ -27,7 +27,7 @@ if [ -f ~/.fzf.zsh ]; then
     git branch -vv --sort=-committerdate | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
       awk '{print $1}' | \
-      xargs -n1 -I{} git checkout {}
+      xargs -I{} git checkout {}
   }
 
   function gfixup {
@@ -36,7 +36,7 @@ if [ -f ~/.fzf.zsh ]; then
     git log --oneline | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
       awk '{print $1}' | \
-      xargs -n1 -I{} git commit -v --fixup {}
+      xargs -I{} git commit -v --fixup {}
   }
 
   function grebase {
@@ -45,7 +45,7 @@ if [ -f ~/.fzf.zsh ]; then
     git log --oneline | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
       awk '{print $1}' | \
-      xargs -o -n1 -I{} git rebase -i {}^
+      xargs -o -I{} git rebase -i {}^
   }
 
   function gtrack {
@@ -60,7 +60,7 @@ if [ -f ~/.fzf.zsh ]; then
       fgrep -v origin/HEAD | \
       fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
       awk '{print $1}' | \
-      xargs -n1 -I{} git checkout --track {}
+      xargs -I{} git checkout --track {}
   }
 
 fi
