@@ -1,6 +1,6 @@
 # aanton/dotfiles
 
-Scripts to install the dotfiles & tools that i use in 🐧 Ubuntu 20.04 (it could work on others Debian-based Linux distributions).
+Scripts to install the dotfiles & tools that i use in 🐧 Ubuntu 22.04 (it could work on others Debian-based Linux distributions).
 
 Inspired by:
 
