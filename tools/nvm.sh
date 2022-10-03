@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -d "$HOME/.nvm" ]; then
+  print_info "App already installed: nvm"
+  return 0
+fi
+
 print_info "Installing nvm ..."
 export NVM_DIR="$HOME/.nvm" && (
   git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
