@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -d "$HOME/.nvm" ]; then
-  print_info "App already installed: nvm"
+  print_warning "App already installed: nvm"
   return 0
 fi
 
