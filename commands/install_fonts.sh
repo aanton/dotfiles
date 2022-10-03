@@ -35,22 +35,12 @@ function check_font_installed {
 }
 
 function install_fonts_firacode {
-  local -r REPOSITORY="https://github.com/tonsky/FiraCode"
+  if [ -d "/usr/share/fonts-firacode" ]; then
+    print_info "Package FiraCode already installed"
+    return 0
+  fi
 
-  for TYPE in Bold Light Medium Regular Retina; do
-    local NAME="FiraCode-${TYPE}.ttf"
-
-    check_font_installed "$NAME"
-    if [ $? -ne 0 ]; then
-      print_info "Installing font: ${NAME} ..."
-
-      local SOURCE="${REPOSITORY}/blob/master/distr/ttf/${NAME}?raw=true"
-      local DESTINATION="${FONTS_DIR}/${NAME}"
-
-      curl --fail -sS -L "${SOURCE}" -o "${DESTINATION}"
-      RELOAD_FONTS=true
-    fi
-  done
+  install_app fonts-firacode
 }
 
 function install_fonts_jetbrains {
