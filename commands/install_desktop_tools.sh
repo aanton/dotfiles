@@ -10,6 +10,7 @@ function install_desktop_tools {
 
   install_app meld
   install_app diodon
+  install_app emote
   install_app google-chrome
   install_app vscode code
   install_app_with_confirmation filezilla
