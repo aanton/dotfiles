@@ -47,7 +47,7 @@ function install_fonts_firacode {
       local SOURCE="${REPOSITORY}/blob/master/distr/ttf/${NAME}?raw=true"
       local DESTINATION="${FONTS_DIR}/${NAME}"
 
-      curl -L "${SOURCE}" -o "${DESTINATION}"
+      curl --fail -sS -L "${SOURCE}" -o "${DESTINATION}"
       RELOAD_FONTS=true
     fi
   done
@@ -66,7 +66,7 @@ function install_fonts_jetbrains {
       local SOURCE="${REPOSITORY}/blob/master/ttf/${NAME}?raw=true"
       local DESTINATION="${FONTS_DIR}/${NAME}"
 
-      curl -L "${SOURCE}" -o "${DESTINATION}"
+      curl --fail -sS -L "${SOURCE}" -o "${DESTINATION}"
       RELOAD_FONTS=true
     fi
   done
@@ -84,7 +84,7 @@ function install_fonts_nerd {
     local DESTINATION="${FONTS_DIR}/${NAME}"
 
     SOURCE=$(echo "${SOURCE}" | sed 's/ /%20/g')
-    curl -L "${SOURCE}" -o "${DESTINATION}"
+    curl --fail -sS -L "${SOURCE}" -o "${DESTINATION}"
     RELOAD_FONTS=true
   fi
 }
