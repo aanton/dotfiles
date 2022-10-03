@@ -56,14 +56,14 @@ function install_fonts_firacode {
 function install_fonts_jetbrains {
   local -r REPOSITORY="https://github.com/JetBrains/JetBrainsMono"
 
-  for TYPE in Bold Bold-Italic ExtraBold ExtraBold-Italic Italic Medium Medium-Italic Regular; do
+  for TYPE in Bold BoldItalic ExtraBold ExtraBoldItalic Italic Medium MediumItalic Regular; do
     local NAME="JetBrainsMono-${TYPE}.ttf"
 
     check_font_installed "$NAME"
     if [ $? -ne 0 ]; then
       print_info "Installing font: ${NAME} ..."
 
-      local SOURCE="${REPOSITORY}/blob/master/ttf/${NAME}?raw=true"
+      local SOURCE="${REPOSITORY}/blob/master/fonts/ttf/${NAME}?raw=true"
       local DESTINATION="${FONTS_DIR}/${NAME}"
 
       curl --fail -sS -L "${SOURCE}" -o "${DESTINATION}"
