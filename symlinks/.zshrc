@@ -56,6 +56,7 @@ plugins=(
   kubectl
   npm
   sudo
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh

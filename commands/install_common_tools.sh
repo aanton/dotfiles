@@ -10,6 +10,9 @@ function install_ohmyzsh {
 
   print_info "Installing: oh-my-zsh ..."
   git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
+
+  print_info "Installing: zsh-autosuggestions plugin ..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 }
 
 function install_z {
