@@ -1,13 +1,5 @@
 [
   {
-    "key": "ctrl+k ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-workbench.action.toggleSidebarVisibility"
-  },
-  {
     "key": "ctrl+r",
     "command": "workbench.action.gotoSymbol"
   },
@@ -22,16 +14,6 @@
   {
     "key": "ctrl+t",
     "command": "-workbench.action.showAllSymbols"
-  },
-  {
-    "key": "alt+enter",
-    "command": "editor.action.showContextMenu",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+f10",
-    "command": "-editor.action.showContextMenu",
-    "when": "editorTextFocus"
   },
   {
     "key": "alt+f3",
@@ -112,17 +94,13 @@
     "when": "inQuickOpen && inRecentFilesPicker"
   },
   {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
+    "key": "ctrl+k ctrl+l",
+    "command": "editor.action.transformToLowercase"
   },
   {
     "key": "ctrl+k ctrl+l",
-    "command": "editor.action.transformToLowercase"
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
   },
   {
     "key": "ctrl+k ctrl+u",
@@ -137,23 +115,6 @@
     "key": "ctrl+n",
     "command": "explorer.newFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "ctrl+0",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarFocus"
-  },
-  {
-    "key": "ctrl+k ctrl+w",
-    "command": "workbench.action.closeOtherEditors"
-  },
-  {
-    "key": "ctrl+k ctrl+w",
-    "command": "-workbench.action.closeAllEditors"
-  },
-  {
-    "key": "ctrl+shift+g l",
-    "command": "workbench.view.extension.gitlens"
   },
   {
     "key": "alt+f7",
@@ -171,42 +132,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "meta+k meta+p",
-    "command": "-better-phpunit.run-previous",
-    "when": "editorLangId == 'php'"
-  },
-  {
-    "key": "meta+k meta+l",
-    "command": "better-phpunit.run-previous",
-    "when": "editorLangId == 'php'"
-  },
-  {
-    "key": "ctrl+numpad_divide",
-    "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+numpad_divide",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+k ctrl+l",
-    "command": "-editor.toggleFold",
-    "when": "editorTextFocus && foldingEnabled"
-  },
-  {
-    "key": "ctrl+shift+[BracketRight]",
-    "command": "editor.toggleFold",
-    "when": "editorTextFocus && foldingEnabled"
-  },
-  {
-    "key": "ctrl+shift+`",
-    "command": "-workbench.action.terminal.new",
-    "when": "terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+`",
+    "key": "ctrl+shift+'",
     "command": "extension.selectEitherQuote",
     "when": "editorFocus"
   }
