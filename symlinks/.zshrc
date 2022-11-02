@@ -102,8 +102,8 @@ alias gll-committer="git log --pretty=format:\"%h %cd | %s%C(yellow)%d%Creset %C
 alias gf="git fetch -p"
 alias gpull="git pull --ff-only"
 alias gpush="git push origin HEAD"
-alias gb='git branch'
-alias gba='git branch -a'
+alias gb='git branch -vv'
+alias gba='git branch -vva'
 alias gm="git checkout main && gpull"
 
 # NPM packages aliases (using npx)
