@@ -104,6 +104,7 @@ alias gpull="git pull --ff-only"
 alias gpush="git push origin HEAD"
 alias gb='git branch -vv'
 alias gba='git branch -vva'
+alias gbd='git branch -d'
 alias gm="git checkout main && gpull"
 
 # NPM packages aliases (using npx)
