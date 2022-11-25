@@ -184,6 +184,12 @@ if [ $ZSH_THEME = "agnoster" ]; then
   }
 fi
 
+# deno
+if [ -d "$HOME/.deno" ]; then
+  export DENO_INSTALL="/home/aanton/.deno"
+  export PATH="$DENO_INSTALL/bin:$PATH"
+fi
+
 # copy&paste
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
