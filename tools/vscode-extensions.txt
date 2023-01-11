@@ -5,6 +5,7 @@ bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
 calebporzio.better-phpunit
 dakara.transformer
+DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
 denoland.vscode-deno
@@ -29,6 +30,7 @@ oderwat.indent-rainbow
 pflannery.vscode-versionlens
 PKief.material-icon-theme
 richie5um2.vscode-sort-json
+ritwickdey.LiveServer
 ryu1kn.partial-diff
 shd101wyy.markdown-preview-enhanced
 sleistner.vscode-fileutils
