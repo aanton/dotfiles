@@ -11,7 +11,6 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.emptySelectionClipboard": false,
   "editor.foldingImportsByDefault": true,
   "editor.fontFamily": "JetBrains Mono, Fira Code, Ubuntu Mono",
   "editor.fontLigatures": true,
