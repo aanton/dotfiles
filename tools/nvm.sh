@@ -22,7 +22,8 @@ print_info "Installing node v16 (lts/gallium) ..."
 nvm install lts/gallium
 
 print_info "Setting node v14 (lts/fermium) as default version ..."
-nvm alias default lts/fermium
+DEFAULT_NODE_VERSION=$(nvm alias lts/fermium)
+nvm alias default $DEFAULT_NODE_VERSION
 
 print_info "Checking default node & npm versions ..."
 print_info "node version is $(node --version)"
