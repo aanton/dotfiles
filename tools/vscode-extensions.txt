@@ -17,6 +17,7 @@ fterrag.vscode-php-cs-fixer
 GehDoc.vscode-textile-preview
 humao.rest-client
 idleberg.textile
+kisstkondoros.vscode-gutter-preview
 kotfire.php-add-property
 mads-hartmann.bash-ide-vscode
 mechatroner.rainbow-csv
