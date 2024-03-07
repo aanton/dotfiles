@@ -83,6 +83,7 @@ export LESS="-ErX"
 
 # Git aliases
 alias gco="git checkout"
+alias gw="git switch"
 alias ga="git add -u"
 alias gc="git commit -v"
 alias gcA="git commit -v --amend --no-edit"
