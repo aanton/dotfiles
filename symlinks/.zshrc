@@ -73,6 +73,9 @@ setopt SHAREHISTORY
 # https://askubuntu.com/questions/881949/ugly-color-for-directories-in-gnome-terminal
 export LS_COLORS="$LS_COLORS:ow=1;7;94"
 
+# Less configuraion
+export LESS="-ErX"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
