@@ -1,0 +1,45 @@
+{
+	"Function expression": {
+		"prefix": "fun",
+		"body": [
+			"const $1 = function ($2) {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Export function expression": {
+		"prefix": "efun",
+		"body": [
+			"export const $1 = function ($2) {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Arrow function": {
+		"prefix": "afun",
+		"body": [
+			"const $1 = ($2) => {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Export arrow function": {
+		"prefix": "eafun",
+		"body": [
+			"export const $1 = ($2) => {",
+			"  $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Reduce array function": {
+		"prefix": ".reduce",
+		"body": [
+			".reduce((${1:acc}, ${2:value}) => ${0:${1:acc} + ${2:value}}${3:, 0})"
+		],
+		"description": ""
+	}
+}
