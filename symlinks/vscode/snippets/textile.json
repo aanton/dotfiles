@@ -1,0 +1,35 @@
+{
+	"Insert inline code": {
+		"prefix": "@",
+		"body": "@${1:${TM_SELECTED_TEXT}}@$0",
+		"description": "Insert inline code"
+	},
+	"Insert PRE block": {
+		"prefix": "pre",
+		"body": [
+			"<pre>",
+			"$0",
+			"</pre>"
+		],
+		"description": "Insert PRE block"
+	},
+	"Insert CODE block": {
+		"prefix": "precode",
+		"body": [
+			"<pre><code class=\"${1:language}\">",
+			"$0",
+			"</code></pre>"
+		],
+		"description": "Insert CODE block"
+	},
+	"Insert JS block": {
+		"prefix": "prejs",
+		"body": [
+			"<pre><code class=\"javascript\">",
+			"$0",
+			"</code></pre>"
+		],
+		"description": "Insert JS block"
+	}
+}
+
