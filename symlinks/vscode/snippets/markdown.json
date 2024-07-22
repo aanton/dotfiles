@@ -40,5 +40,12 @@
 		],
 		"description": "Insert shell block"
 	},
+	"Insert Redmine issue link": {
+		"prefix": "#t",
+		"body": [
+			"[#$1](https://redmine.henneo.com/issues/$1) $0"
+		],
+		"description": "Insert Redmine issue link"
+	},
 }
 
