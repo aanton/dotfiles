@@ -52,7 +52,6 @@ plugins=(
   bgnotify
   composer
   docker
-  docker-compose
   kubectl
   npm
   sudo
