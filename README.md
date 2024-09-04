@@ -1,11 +1,11 @@
 # aanton/dotfiles
 
-Scripts to install the dotfiles & tools that i use in 🐧 Ubuntu 22.04 (it could work on others Debian-based Linux distributions).
+Scripts to install the dotfiles & tools that i use in 🐧 Ubuntu 24.04 (it could work on others Debian-based Linux distributions).
 
 Inspired by:
 
-- https://github.com/victoriadrake/dotfiles
-- https://github.com/alrra/dotfiles
+- <https://github.com/victoriadrake/dotfiles>
+- <https://github.com/alrra/dotfiles>
 
 ## 👉 Requirements
 
