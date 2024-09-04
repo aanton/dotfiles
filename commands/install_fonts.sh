@@ -64,13 +64,13 @@ function install_fonts_jetbrains {
 
 function install_fonts_nerd {
   local -r REPOSITORY="https://github.com/ryanoasis/nerd-fonts"
-  local -r NAME="Ubuntu Mono Nerd Font Complete Mono.ttf"
+  local -r NAME="UbuntuMonoNerdFontMono-Regular.ttf"
 
   check_font_installed "$NAME"
   if [ $? -ne 0 ]; then
     print_info "Installing font: ${NAME} ..."
 
-    local SOURCE="${REPOSITORY}/blob/master/patched-fonts/UbuntuMono/Regular/complete/${NAME}?raw=true"
+    local SOURCE="${REPOSITORY}/blob/master/patched-fonts/UbuntuMono/Regular/${NAME}?raw=true"
     local DESTINATION="${FONTS_DIR}/${NAME}"
 
     SOURCE=$(echo "${SOURCE}" | sed 's/ /%20/g')
