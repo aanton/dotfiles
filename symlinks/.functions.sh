@@ -21,6 +21,15 @@ if [ -f ~/.fzf.zsh ]; then
       xargs -I{} git show {}
   }
 
+  function gdshow {
+    local preview=$(__preview_git_show)
+
+    git log --oneline | \
+      fzf --exact --no-multi --no-sort --query=$1 --preview "$preview" | \
+      awk '{print $1}' | \
+      xargs -I{} git difftool -d {}^..{}
+  }
+
   function gbranch {
     local preview=$(__preview_git_log)
 
