@@ -75,6 +75,9 @@ export LESS="-ErX"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias bat="batcat"
+alias ls="ls --color=auto --hyperlink=auto --group-directories-first"
+
 # Git aliases
 alias gco="git checkout"
 alias gw="git switch"
