@@ -67,11 +67,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt SHAREHISTORY
 
-# Gnome Terminal colors
-# https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
-# https://askubuntu.com/questions/881949/ugly-color-for-directories-in-gnome-terminal
-export LS_COLORS="$LS_COLORS:ow=1;7;94"
-
 # Less configuraion
 export LESS="-ErX"
 
