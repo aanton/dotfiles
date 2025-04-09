@@ -185,7 +185,7 @@ fi
 # deno
 if [ -d "$HOME/.deno" ]; then
   export DENO_INSTALL="/home/aanton/.deno"
-  export PATH="$DENO_INSTALL/bin:$PATH"
+  # export PATH="$DENO_INSTALL/bin:$PATH"
 fi
 
 # bun
@@ -195,6 +195,9 @@ if [ -d "$HOME/.bun" ]; then
   export BUN_INSTALL="$HOME/.bun"
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
+
+# paths
+export PATH="$PATH:~/.local/bin"
 
 # copy&paste
 alias pbcopy="xclip -selection clipboard"
