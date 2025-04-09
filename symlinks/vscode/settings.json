@@ -1,4 +1,9 @@
 {
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "explicit"
+    }
+  },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
     "editor.tabSize": 4
@@ -10,9 +15,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.markdownlint": "explicit"
-  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.foldingImportsByDefault": true,
   "editor.fontFamily": "JetBrains Mono, Fira Code, Ubuntu Mono",
@@ -25,6 +27,7 @@
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "always",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
@@ -38,6 +41,13 @@
   "explorer.openEditors.visible": 0,
   "files.defaultLanguage": "markdown",
   "git.mergeEditor": false,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false,
+    "textile": false
+  },
   "gitlens.keymap": "chorded",
   "gitlens.views.repositories.files.layout": "tree",
   "gitlens.views.searchAndCompare.files.layout": "list",
